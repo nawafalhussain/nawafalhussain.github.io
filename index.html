@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Nawaf Alhussain — Lead AI Data Scientist in Riyadh. Bilingual AI agents, demand forecasting, analytics and knowledge graphs in production at Channels by STC.">
+<meta property="og:title" content="Nawaf Alhussain · AI Portfolio">
+<meta property="og:description" content="I build AI that understands the business, not just the data. Agents, machine learning and analytics at Channels by STC.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0C8C78">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230C8C78'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='36' fill='white' text-anchor='middle'%3En%3C/text%3E%3C/svg%3E">
+<style>:root{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Nawaf Alhussain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Alexandria:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: white gallery, generous air; one mint-to-teal voice; a living graph opens the page; projects as illustrated tiles that open into full case studies */
+:root{
+  --bg:#FFFFFF; --surface:#F5FAF8; --fg:#0D1F1B; --muted:#5B6E69; --line:#E2ECE8;
+  --mint:#2DD4AE; --teal:#0C8C78; --deep:#08604F; --mint-soft:#E5F8F2; --mint-wash:#F0FBF7;
+  --amber:#E9A23B;
+  --display:"Manrope","Alexandria",system-ui,sans-serif;
+  --display-ar:"Alexandria","IBM Plex Sans Arabic",system-ui,sans-serif;
+  --body:"IBM Plex Sans Arabic","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+main{overflow-x:clip}
+.ar{display:none}
+:root[data-lang="ar"] .ar{display:revert}
+:root[data-lang="ar"] .en{display:none}
+:root[data-lang="ar"] :is(h1,h2,h3,h4,.d){font-family:var(--display-ar);letter-spacing:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--mint);outline-offset:3px;border-radius:8px}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.02em;line-height:1.08}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+:root[data-lang="ar"] .eyebrow{font-family:var(--body);letter-spacing:0;text-transform:none;font-size:14px;font-weight:600}
+.muted{color:var(--muted)}
+
+:root[data-lang="ar"] .hero h1 .ar-name{font-size:1em;line-height:1.25}
+/* ---------- top bar ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.8);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.bar.scrolled{border-color:var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:20px;padding-block:14px}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:17px;text-decoration:none;color:var(--fg)}
+.mark i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--mint),var(--teal));display:grid;place-items:center;color:#fff;font-style:normal;font-size:13px}
+nav{display:flex;gap:2px;margin-inline-start:auto}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px;transition:color .2s,background .2s}
+nav a:hover{color:var(--fg)}
+nav a.on{color:var(--deep);background:var(--mint-soft)}
+.lang{font-family:var(--display-ar);font-size:13.5px;border:1px solid var(--line);background:#fff;color:var(--fg);border-radius:999px;padding:7px 16px;cursor:pointer;transition:border-color .2s}
+:root[data-lang="ar"] .lang{font-family:var(--display)}
+.lang:hover{border-color:var(--teal)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-block:clamp(40px,7vw,88px) 40px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.hero-grid > *{min-width:0}
+.hero h1{font-size:clamp(46px,7vw,96px);font-weight:800;letter-spacing:-.045em;line-height:.95}
+.hero h1 .w{display:block;white-space:nowrap}
+.hero h1 .w+.w{font-size:.72em;font-weight:700;color:var(--muted);letter-spacing:-.03em}
+.hero h1 .ar-name{display:block;font-family:var(--display-ar);font-weight:700;letter-spacing:0;font-size:.66em;line-height:1.3;background:linear-gradient(100deg,var(--mint),var(--teal) 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{margin:22px 0 0;font-size:18px;color:var(--muted)}
+.role strong{color:var(--fg);font-weight:600}
+.thesis{font-family:var(--display);font-size:clamp(20px,2.3vw,26px);font-weight:600;line-height:1.35;letter-spacing:-.01em;margin:16px 0 0;max-width:24ch}
+:root[data-lang="ar"] .thesis{font-family:var(--display-ar);font-weight:500;line-height:1.6}
+.thesis em{font-style:normal;color:var(--teal)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s,background .25s;cursor:pointer;border:0;font-family:inherit}
+.btn.primary{background:var(--fg);color:#fff;box-shadow:0 10px 24px -12px rgba(13,31,27,.6)}
+.btn.primary:hover{background:var(--deep);transform:translateY(-2px)}
+.btn.ghost{color:var(--fg);background:var(--mint-soft)}
+.btn.ghost:hover{transform:translateY(-2px)}
+.btn .arr{transition:transform .25s var(--ease)}
+.btn:hover .arr{transform:translateX(3px)}
+:root[dir="rtl"] .btn .arr{transform:scaleX(-1)}
+:root[dir="rtl"] .btn:hover .arr{transform:scaleX(-1) translateX(3px)}
+.stage{position:relative;aspect-ratio:1/1;max-width:100%}
+.stage::before{content:"";position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 45% 40%,var(--mint-soft),rgba(229,248,242,0) 68%)}
+.stage canvas{position:relative;width:100%;height:100%;display:block;cursor:crosshair}
+.stage-cap{position:absolute;inset-inline:0;bottom:0;text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+:root[data-lang="ar"] .stage-cap{font-family:var(--body);font-size:13px}
+.stage-cap b{color:var(--teal);font-weight:600}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:40px;border-top:1px solid var(--line)}
+.stat{padding:22px 4px 0;display:flex;flex-direction:column;gap:2px;min-width:0}
+.stat b{font-family:var(--display);font-size:clamp(28px,3.4vw,42px);font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.1}
+.stat b{direction:ltr;unicode-bidi:isolate;align-self:flex-start}
+.stat b small{font-size:.55em;color:var(--teal);font-weight:700}
+.stat span{font-size:14px;color:var(--muted)}
+
+/* ---------- sections ---------- */
+section{padding-block:clamp(56px,8vw,104px)}
+.sec-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px;margin-bottom:40px}
+.sec-head > *{min-width:0}
+.sec-head h2{font-size:clamp(34px,4.6vw,58px);font-weight:800;letter-spacing:-.035em;margin-top:10px}
+.sec-head p{margin:0;color:var(--muted);max-width:38ch;font-size:15.5px}
+
+/* ---------- work tiles ---------- */
+.tiles{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
+.tile{grid-column:span 6;position:relative;display:flex;flex-direction:column;border-radius:28px;background:var(--surface);overflow:hidden;cursor:pointer;text-align:start;border:0;padding:0;font:inherit;color:inherit;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.tile:nth-child(1){grid-column:span 7}.tile:nth-child(2){grid-column:span 5}
+.tile:nth-child(3){grid-column:span 5}.tile:nth-child(4){grid-column:span 7}
+.tile:hover{transform:translateY(-6px);box-shadow:0 30px 60px -36px rgba(8,96,79,.45)}
+.art{position:relative;height:230px;background:linear-gradient(160deg,var(--mint-wash),var(--mint-soft));overflow:hidden}
+.tile:nth-child(2) .art,.tile:nth-child(3) .art{background:linear-gradient(160deg,#F4FBF9,#E9F5F1)}
+.art > svg{position:absolute;inset:0;width:100%;height:100%}
+.art .ln{stroke:var(--teal);stroke-width:1.6;fill:none;opacity:.45;stroke-dasharray:6 6;transition:opacity .4s}
+.art .nd{fill:#fff;stroke:var(--teal);stroke-width:1.6}
+.art .hb{fill:var(--teal)}
+.art .mt{fill:var(--mint)}
+.art .tx{font-family:var(--mono);font-size:11px;fill:var(--deep)}
+.art .card{fill:#fff;filter:drop-shadow(0 6px 10px rgba(8,96,79,.12))}
+@media (prefers-reduced-motion:no-preference){
+  .art .ln{animation:flow 1.8s linear infinite paused}
+  .tile:hover .art .ln{animation-play-state:running;opacity:.9}
+  @keyframes flow{to{stroke-dashoffset:-24}}
+  .art .float{animation:bob 5s ease-in-out infinite}
+  @keyframes bob{50%{transform:translateY(-6px)}}
+}
+.tile-body{padding:24px 26px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tile-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.status{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--deep)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(45,212,174,.2)}
+.status.build{color:#9A6510}.status.build::before{background:var(--amber);box-shadow:0 0 0 4px rgba(233,162,59,.2)}
+.tile h3{font-size:clamp(24px,2.4vw,30px);font-weight:800}
+.tile p{margin:0;color:var(--muted);font-size:15px;max-width:46ch}
+.kpis{display:flex;flex-wrap:wrap;gap:22px;margin-top:auto;padding-top:14px}
+.kpi b{display:block;font-family:var(--display);font-size:22px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi span{font-size:12.5px;color:var(--muted)}
+.open{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--teal);margin-top:8px}
+.open .arr{transition:transform .3s var(--ease)}
+.tile:hover .open .arr{transform:translateX(4px)}
+:root[dir="rtl"] .open .arr{transform:scaleX(-1)}
+.also{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:28px;font-size:14px}
+.also .pill{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:#fff}
+
+/* ---------- case drawer ---------- */
+.scrim{position:fixed;inset:0;z-index:40;background:rgba(13,31,27,.32);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .35s}
+.scrim.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;z-index:41;top:0;bottom:0;inset-inline-end:0;width:min(720px,100%);background:#fff;overflow-y:auto;transform:translateX(105%);transition:transform .5s var(--ease);padding:calc(env(safe-area-inset-top,0px) + 28px) clamp(20px,4vw,48px) calc(env(safe-area-inset-bottom,0px) + 48px);box-shadow:-30px 0 60px -30px rgba(13,31,27,.35)}
+:root[dir="rtl"] .drawer{transform:translateX(-105%)}
+.drawer.show{transform:none!important}
+.drawer:not(.show){visibility:hidden;transition:transform .5s var(--ease),visibility 0s .5s}
+.drawer .x{position:sticky;top:0;float:inline-end;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:20px;cursor:pointer;color:var(--fg)}
+.drawer h3{font-size:clamp(28px,4vw,40px);font-weight:800;margin-top:10px}
+.drawer .kicker{color:var(--muted);font-size:17px;margin:10px 0 24px}
+.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:16px;border-radius:18px;background:var(--surface);margin-bottom:28px}
+.meta div{min-width:0}
+.meta dt{font-size:12px;color:var(--muted)}
+.meta dd{margin:2px 0 0;font-size:14px;font-weight:500}
+.steps{display:grid;gap:22px}
+.step{display:grid;grid-template-columns:36px 1fr;gap:14px}
+.step i{font-style:normal;width:36px;height:36px;border-radius:12px;background:var(--mint-soft);color:var(--deep);display:grid;place-items:center;font-family:var(--mono);font-size:13px;font-weight:600}
+.step h4{font-size:17px;font-weight:700;margin-top:6px}
+.step p{margin:6px 0 0;color:var(--muted);font-size:15px}
+.flow{font-family:var(--mono);font-size:12.5px;margin-top:24px;padding:14px 16px;border-radius:14px;background:var(--surface);overflow-x:auto;white-space:nowrap;color:var(--muted)}
+.flow em{font-style:normal;color:var(--teal);font-weight:600}
+.dk{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.dk div{flex:1 1 130px;padding:14px 16px;border-radius:16px;border:1px solid var(--line)}
+.dk b{display:block;font-family:var(--display);font-size:24px;font-weight:800;color:var(--teal);font-variant-numeric:tabular-nums}
+.dk span{font-size:13px;color:var(--muted)}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.stack span{font-family:var(--mono);font-size:12px;padding:5px 11px;border-radius:999px;background:var(--mint-soft);color:var(--deep)}
+
+/* ---------- demos ---------- */
+#demos{background:linear-gradient(180deg,var(--mint-wash),#fff);border-radius:40px;margin-inline:auto}
+#demos .inner{padding-inline:clamp(0px,2vw,24px)}
+.tabs{display:inline-flex;gap:4px;padding:5px;border-radius:999px;background:#fff;border:1px solid var(--line);margin-bottom:24px;flex-wrap:wrap;max-width:100%}
+.tabs button{font:inherit;font-size:14px;font-weight:600;border:0;background:transparent;color:var(--muted);padding:9px 18px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}
+.tabs button[aria-selected="true"]{background:var(--fg);color:#fff}
+.panel{background:#fff;border-radius:28px;padding:clamp(20px,3vw,36px);box-shadow:0 1px 0 var(--line),0 30px 60px -40px rgba(8,96,79,.35);display:grid;grid-template-columns:300px 1fr;gap:36px}
+.panel > *{min-width:0}
+.panel h3{font-size:26px;font-weight:800}
+.panel .side{display:flex;flex-direction:column;gap:16px}
+.panel .side p{margin:0;color:var(--muted);font-size:14.5px}
+@media (prefers-reduced-motion:no-preference){.panel:not([hidden]){animation:rise .5s var(--ease)}@keyframes rise{from{transform:translateY(12px);opacity:.4}}}
+.ctrl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;font-size:14px;font-weight:500}
+.ctrl input{grid-column:1/-1;width:100%;accent-color:var(--teal)}
+.ctrl output{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:12.5px;background:var(--mint-soft);color:var(--deep);padding:2px 9px;border-radius:7px}
+.viz{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:center}
+.viz > *{min-width:0}
+.viz svg{width:100%;height:auto;display:block}
+.verdict{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:14px}
+.verdict b{font-family:var(--display);font-size:30px;font-weight:800;color:var(--teal);letter-spacing:-.02em}
+:root[data-lang="ar"] .verdict b{font-family:var(--display-ar)}
+.verdict code{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+#advice{margin:6px 0 0;font-size:15px}
+.q-list{display:flex;flex-direction:column;gap:8px}
+.q{font:inherit;font-size:14px;text-align:start;padding:11px 14px;border-radius:14px;border:1px solid var(--line);background:#fff;color:var(--fg);cursor:pointer;transition:all .2s}
+.q:hover{border-color:var(--mint)}
+.q[aria-pressed="true"]{border-color:var(--teal);background:var(--mint-soft);color:var(--deep)}
+#flow{width:100%;height:auto;display:block}
+.t-node rect{fill:#fff;stroke:var(--line);stroke-width:1.4;transition:all .35s var(--ease)}
+.t-node text{font-family:var(--mono);font-size:12px;fill:var(--muted);transition:fill .3s}
+.t-node.on rect{fill:var(--teal);stroke:var(--teal)}
+.t-node.on text{fill:#fff;font-weight:600}
+.t-edge{stroke:var(--line);stroke-width:1.5;fill:none;transition:stroke .3s}
+.t-edge.on{stroke:var(--mint);stroke-width:2.5;stroke-dasharray:6 5}
+@media (prefers-reduced-motion:no-preference){.t-edge.on{animation:flow 1s linear infinite}}
+.t-out{font-size:15px;padding:16px 18px;border-radius:16px;background:var(--mint-wash);margin-top:12px}
+.t-out .eyebrow{display:block;margin-bottom:4px}
+.seg{display:inline-flex;border-radius:999px;padding:4px;background:var(--surface);flex-wrap:wrap;width:fit-content}
+.seg button{font:inherit;font-size:13.5px;font-weight:600;border:0;background:transparent;color:var(--muted);padding:7px 15px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--teal);color:#fff}
+.query{font-size:14px;padding:12px 14px;border-radius:14px;background:var(--surface)}
+.score-k{display:flex;gap:12px;align-items:baseline}
+.score-k b{font-family:var(--display);font-size:38px;font-weight:800;color:var(--teal);font-variant-numeric:tabular-nums}
+.rank{list-style:none;margin:0;padding:0;position:relative}
+.rank li{position:absolute;inset-inline:0;display:grid;grid-template-columns:28px 1fr 110px;gap:14px;align-items:center;padding:12px 16px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:transform .55s var(--ease),background .3s;font-size:14px}
+.rank li > *{min-width:0}
+.rank li.top{background:var(--mint-wash);border-color:#BFEBDD}
+.rank .pos{font-family:var(--display);font-weight:800;color:var(--teal)}
+.rank .tag{display:inline-block;font-size:11px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--mint-soft);color:var(--deep);margin-inline-start:6px}
+.bars{display:grid;gap:4px}
+.bars span{display:block;height:6px;border-radius:3px;background:var(--surface)}
+.bars i{display:block;height:100%;border-radius:3px;background:var(--teal)}
+.bars span + span i{background:var(--mint)}
+.legend{display:flex;gap:16px;font-size:12.5px;color:var(--muted)}
+.legend > span::before{content:"";display:inline-block;width:12px;height:6px;border-radius:3px;margin-inline-end:6px;vertical-align:middle;background:var(--teal)}
+.legend > span + span::before{background:var(--mint)}
+.fine{font-size:12px;color:var(--muted);margin:0}
+
+/* ---------- notes ---------- */
+.notes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.note{padding:24px;border-radius:24px;background:var(--surface);display:flex;flex-direction:column;gap:12px;min-width:0;transition:background .3s,transform .4s var(--ease)}
+.note:hover{background:var(--mint-soft);transform:translateY(-4px)}
+.note .n{font-family:var(--display);font-size:44px;font-weight:800;line-height:1;color:var(--mint);letter-spacing:-.04em}
+.note h4{font-size:18px;font-weight:700;line-height:1.3}
+.note p{margin:0;font-size:14px;color:var(--muted)}
+.note .from{margin-top:auto;font-family:var(--mono);font-size:11.5px;color:var(--teal)}
+
+/* ---------- toolkit + creds ---------- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px)}
+.two > *{min-width:0}
+.two h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;letter-spacing:-.03em;margin:10px 0 24px}
+.kit{display:grid;gap:0}
+.kit div{display:grid;grid-template-columns:130px 1fr;gap:16px;padding-block:14px;border-top:1px solid var(--line)}
+.kit div > *{min-width:0}
+.kit dt{font-weight:600;font-size:14.5px}
+.kit dd{margin:0;font-family:var(--mono);font-size:12.5px;color:var(--muted);line-height:1.9}
+.creds{display:grid}
+.cred{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding-block:14px;border-top:1px solid var(--line);align-items:center}
+.cred h4{font-family:var(--body);font-size:15.5px;font-weight:600;letter-spacing:0}
+.cred p{margin:0;font-size:13px;color:var(--muted);grid-column:1}
+.cred .status{grid-row:1/3;grid-column:2;font-size:12px}
+
+/* ---------- contact ---------- */
+.contact{position:relative;overflow:hidden;border-radius:40px;background:var(--fg);color:#fff;padding:clamp(32px,6vw,72px);display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;margin-block:24px 56px}
+.contact > *{min-width:0;position:relative}
+.contact::before{content:"";position:absolute;width:520px;height:520px;inset-inline-end:-140px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(45,212,174,.45),rgba(45,212,174,0) 65%)}
+.contact h2{font-size:clamp(32px,4.6vw,56px);font-weight:800;letter-spacing:-.035em}
+.contact h2 em{font-style:normal;color:var(--mint)}
+.contact p{color:#B5C9C3;max-width:44ch;margin:16px 0 0}
+.links{display:grid;gap:10px}
+.links div{display:flex;justify-content:space-between;gap:12px;padding:16px 20px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-size:14.5px;flex-wrap:wrap}
+.links span:last-child{font-family:var(--mono);color:#9FB8B1}
+footer{padding-block:0 32px;color:var(--muted);font-size:13px}
+
+/* ---------- progress, marquee, spotlight ---------- */
+.progress{position:absolute;inset-inline-start:0;bottom:-1px;height:2px;width:100%;background:linear-gradient(90deg,var(--mint),var(--teal));transform-origin:left;transform:scaleX(0)}
+:root[dir="rtl"] .progress{transform-origin:right}
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding-block:18px;margin-top:8px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee .track{display:flex;gap:44px;width:max-content;font-family:var(--display);font-weight:700;font-size:20px;color:#A9BCB6;white-space:nowrap}
+.marquee .track span::before{content:"✦";color:var(--mint);margin-inline-end:44px;font-size:13px;vertical-align:middle}
+@media (prefers-reduced-motion:no-preference){.marquee .track{animation:slide 38s linear infinite}@keyframes slide{to{transform:translateX(-50%)}}:root[dir="rtl"] .marquee .track{animation-direction:reverse}}
+.tile::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(45,212,174,.16),transparent 45%)}
+.tile:hover::after{opacity:1}
+
+/* ---------- drawer nav ---------- */
+.dnav{display:flex;justify-content:space-between;gap:12px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.dnav button{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--fg);padding:10px 16px;border-radius:999px;cursor:pointer;max-width:48%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dnav button:hover{border-color:var(--teal);color:var(--teal)}
+
+/* ---------- ask assistant ---------- */
+.ask-fab{position:fixed;z-index:30;inset-inline-end:clamp(16px,3vw,32px);bottom:calc(env(safe-area-inset-bottom,0px) + clamp(16px,3vw,32px));display:flex;align-items:center;gap:10px;padding:12px 18px 12px 14px;border-radius:999px;border:0;background:var(--fg);color:#fff;font:inherit;font-size:14.5px;font-weight:600;cursor:pointer;box-shadow:0 16px 36px -14px rgba(13,31,27,.6);transition:transform .3s var(--ease)}
+.ask-fab:hover{transform:translateY(-3px)}
+.ask-fab i{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--teal));display:grid;place-items:center;font-style:normal;font-size:13px}
+.ask{position:fixed;z-index:42;inset-inline-end:clamp(12px,3vw,32px);bottom:calc(env(safe-area-inset-bottom,0px) + clamp(12px,3vw,32px));width:min(400px,calc(100% - 24px));max-height:min(620px,calc(100% - 100px));display:flex;flex-direction:column;background:#fff;border-radius:26px;box-shadow:0 40px 80px -30px rgba(13,31,27,.45),0 0 0 1px var(--line);overflow:hidden;transform:translateY(20px) scale(.97);opacity:0;pointer-events:none;transition:transform .4s var(--ease),opacity .3s}
+.ask.show{transform:none;opacity:1;pointer-events:auto}
+.ask header{display:flex;align-items:center;gap:12px;padding:16px 18px;background:linear-gradient(135deg,var(--mint-wash),var(--mint-soft))}
+.ask header i{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--mint),var(--teal));display:grid;place-items:center;color:#fff;font-style:normal;font-weight:700}
+.ask header b{display:block;font-family:var(--display);font-size:15.5px}
+:root[data-lang="ar"] .ask header b{font-family:var(--display-ar)}
+.ask header small{color:var(--muted);font-size:12.5px}
+.ask header button{margin-inline-start:auto;width:34px;height:34px;border-radius:50%;border:0;background:#fff;font-size:18px;cursor:pointer;color:var(--fg)}
+.log{flex:1;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-height:160px}
+.msg{max-width:88%;padding:10px 14px;border-radius:18px;font-size:14.5px;line-height:1.55;white-space:pre-wrap}
+.msg.bot{background:var(--surface);border-end-start-radius:6px;align-self:flex-start}
+.msg.me{background:var(--teal);color:#fff;border-end-end-radius:6px;align-self:flex-end}
+.msg.wait{color:var(--muted)}
+.sugs{display:flex;flex-wrap:wrap;gap:6px;padding:0 18px 12px}
+.sugs button{font:inherit;font-size:12.5px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--deep);cursor:pointer}
+.sugs button:hover{border-color:var(--mint);background:var(--mint-wash)}
+.ask form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}
+.ask input{flex:1;min-width:0;font:inherit;font-size:14.5px;padding:10px 14px;border-radius:999px;border:1px solid var(--line);outline:none;color:var(--fg);background:#fff}
+.ask input:focus{border-color:var(--teal)}
+.ask form button{border:0;border-radius:999px;background:var(--teal);color:#fff;font:inherit;font-weight:600;padding:0 16px;cursor:pointer}
+.ask .note-ai{padding:0 18px 12px;font-size:11.5px;color:var(--muted);margin:0}
+
+/* ---------- mobile dock ---------- */
+.dock{display:none}
+@media (max-width:860px){
+  .dock{position:fixed;z-index:25;inset-inline-start:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);display:flex;gap:2px;padding:5px;border-radius:999px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-shadow:0 10px 30px -12px rgba(13,31,27,.35),0 0 0 1px var(--line)}
+  .dock a{font-size:12.5px;font-weight:600;color:var(--muted);text-decoration:none;padding:8px 11px;border-radius:999px}
+  .dock a.on{background:var(--mint-soft);color:var(--deep)}
+  .ask-fab span.lbl{display:none}
+  .ask-fab{padding:12px}
+  footer{padding-bottom:96px}
+}
+
+/* ---------- depth: hero mesh, glass, intro ---------- */
+.hero{isolation:isolate}
+.hero h1 .ar-name .ch{background:linear-gradient(100deg,var(--mint),var(--teal) 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mesh{position:absolute;inset:-80px -20vw 0;z-index:-1;pointer-events:none;overflow:hidden}
+.mesh i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55}
+.mesh i:nth-child(1){width:520px;height:520px;background:#BFF3E3;top:-60px;inset-inline-end:8%}
+.mesh i:nth-child(2){width:380px;height:380px;background:#D9F7EE;top:260px;inset-inline-start:2%}
+.mesh i:nth-child(3){width:300px;height:300px;background:#A7EBD9;top:120px;inset-inline-end:34%;opacity:.35}
+.mesh::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(12,140,120,.10) 1px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 65% 35%,#000,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 65% 35%,#000,transparent 75%)}
+@media (prefers-reduced-motion:no-preference){
+  .mesh i:nth-child(1){animation:drift 18s ease-in-out infinite}
+  .mesh i:nth-child(2){animation:drift 22s ease-in-out infinite reverse}
+  .mesh i:nth-child(3){animation:drift 15s ease-in-out infinite}
+  @keyframes drift{33%{transform:translate(40px,30px) scale(1.08)}66%{transform:translate(-30px,20px) scale(.95)}}
+  .hero h1 .ch{display:inline-block;animation:up .9s var(--ease) both}
+  @keyframes up{from{transform:translateY(60%);opacity:0;filter:blur(6px)}}
+  .hero .eyebrow,.hero .thesis,.hero .role,.hero .cta{animation:fade .9s var(--ease) both}
+  .hero .eyebrow{animation-delay:.05s}.hero .thesis{animation-delay:.45s}.hero .role{animation-delay:.55s}.hero .cta{animation-delay:.65s}
+  @keyframes fade{from{transform:translateY(14px);opacity:0}}
+}
+.stage{aspect-ratio:1/1}
+.stage::before{display:none}
+.stage canvas{cursor:grab}
+.stage canvas:active{cursor:grabbing}
+.tip{position:absolute;z-index:2;min-width:180px;max-width:230px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);box-shadow:0 18px 40px -18px rgba(8,96,79,.45),0 0 0 1px rgba(255,255,255,.9);pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s}
+.tip.show{opacity:1;transform:none}
+.tip b{display:block;font-family:var(--display);font-size:15px}
+.tip span{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.tip em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--teal)}
+.stats{border-top:0;gap:14px}
+.stat{padding:18px 20px;border-radius:22px;background:rgba(255,255,255,.66);backdrop-filter:blur(14px);box-shadow:0 0 0 1px rgba(226,236,232,.9),0 20px 40px -30px rgba(8,96,79,.4)}
+
+/* ---------- product mock-ups ---------- */
+.mock{border-radius:18px;background:#fff;box-shadow:0 0 0 1px var(--line),0 24px 50px -28px rgba(8,96,79,.45);overflow:hidden;font-size:13px;line-height:1.5;color:var(--fg);text-align:start}
+.mock .chrome{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line);background:#FAFCFB}
+.mock .chrome i{width:8px;height:8px;border-radius:50%;background:#E3E9E7}
+.mock .chrome span{margin-inline-start:8px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.mock .chrome em{margin-inline-start:auto;font-style:normal;font-size:10.5px;font-family:var(--mono);color:var(--teal);background:var(--mint-soft);padding:1px 8px;border-radius:999px}
+.mock .pad{padding:14px;display:flex;flex-direction:column;gap:10px}
+.mb{max-width:82%;padding:8px 12px;border-radius:14px;font-size:12.5px}
+.mb.u{align-self:flex-end;background:var(--teal);color:#fff;border-end-end-radius:4px}
+.mb.b{align-self:flex-start;background:var(--surface);border-end-start-radius:4px}
+.mb.ar-t{direction:rtl;text-align:right}
+.lcard{align-self:flex-start;width:74%;border-radius:14px;border:1px solid var(--line);padding:12px;display:grid;gap:6px;direction:rtl;text-align:right}
+.lcard h5{margin:0;font-family:var(--display-ar);font-size:13.5px}
+.lcard .row{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.lcard .row b{color:var(--fg);font-weight:600}
+.lcard .go{margin-top:4px;text-align:center;background:var(--fg);color:#fff;border-radius:10px;padding:7px;font-size:12px;font-weight:600}
+.cite{align-self:flex-start;display:flex;gap:6px;flex-wrap:wrap}
+.cite span{font-size:10.5px;padding:2px 8px;border-radius:999px;background:var(--mint-soft);color:var(--deep);font-family:var(--mono)}
+.kchips{display:flex;gap:8px;flex-wrap:wrap}
+.kchips div{flex:1;min-width:70px;padding:8px 10px;border-radius:12px;background:var(--surface)}
+.kchips b{display:block;font-family:var(--display);font-size:16px}
+.kchips span{font-size:10.5px;color:var(--muted)}
+.mock svg{display:block;width:100%;height:auto}
+.mt{width:100%;border-collapse:collapse;font-size:11.5px;font-variant-numeric:tabular-nums}
+.mt th{font-weight:600;color:var(--muted);text-align:start;padding:5px 6px;border-bottom:1px solid var(--line);font-size:10.5px}
+.mt td{padding:5px 6px;border-bottom:1px solid #F0F4F2}
+.mt td:last-child,.mt th:last-child{text-align:end}
+.mt .up{color:var(--teal);font-weight:700}
+.code{font-family:var(--mono);font-size:11px;line-height:1.6;background:#0F2420;color:#CFE9E1;border-radius:12px;padding:10px 12px;white-space:pre;overflow:hidden;direction:ltr;text-align:left}
+.code .k{color:#5EE0C0}.code .s{color:#F2C879}
+.kg-wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:10px;align-items:center}
+.kg-side{border-radius:12px;background:var(--surface);padding:10px;display:grid;gap:6px;font-size:11.5px}
+.kg-side b{font-family:var(--display);font-size:13px}
+.kg-side .lk{display:flex;gap:6px;align-items:center}
+.kg-side .lk::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint)}
+.illus{font-size:11px;color:var(--muted);margin:10px 0 0;text-align:end}
+.art{height:250px}
+.art .mock{position:absolute;width:520px;left:50%;top:30px;transform:translateX(-50%) scale(.84) rotate(-1.5deg);transform-origin:top center;transition:transform .6s var(--ease)}
+.tile:hover .art .mock{transform:translateX(-50%) scale(.88) rotate(0deg) translateY(-6px)}
+.tile:nth-child(2) .art .mock,.tile:nth-child(3) .art .mock{transform:translateX(-50%) scale(.76) rotate(1.5deg)}
+.tile:nth-child(2):hover .art .mock,.tile:nth-child(3):hover .art .mock{transform:translateX(-50%) scale(.8) rotate(0deg) translateY(-6px)}
+.art::after{content:"";position:absolute;inset:auto 0 0;height:60px;background:linear-gradient(transparent,rgba(240,251,247,.95));pointer-events:none}
+.drawer .mockbox{margin:0 0 28px;padding:18px;border-radius:22px;background:linear-gradient(160deg,var(--mint-wash),var(--mint-soft))}
+@media (max-width:980px){.art .mock{transform:translateX(-50%) scale(.84)!important}}
+@media (max-width:560px){.art{height:220px}.art .mock{transform:translateX(-50%) scale(.66)!important;top:22px}.kg-wrap{grid-template-columns:1fr}}
+
+/* ---------- architecture diagrams ---------- */
+.archbox{margin-top:28px;padding:18px;border-radius:22px;border:1px solid var(--line);background:#fff}
+.archbox .eyebrow{display:block;margin-bottom:10px}
+.archbox svg{width:100%;height:auto;display:block}
+.ab{fill:#fff;stroke:#C9DCD6;stroke-width:1.4}
+.ab.hi{fill:var(--mint-soft);stroke:var(--teal)}
+.ab.dk{fill:var(--fg);stroke:var(--fg)}
+.at{font-family:"JetBrains Mono",monospace;font-size:10.5px;fill:var(--fg)}
+.at.w{fill:#fff}.at.m{fill:var(--muted);font-size:9.5px}
+.ae{stroke:#B7CFC8;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+.ae.hi{stroke:var(--teal);stroke-width:2;stroke-dasharray:5 4}
+@media (prefers-reduced-motion:no-preference){.ae.hi{animation:flow 1.2s linear infinite}}
+.lane{fill:var(--surface)}
+.lanet{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.1em;fill:var(--muted)}
+
+/* ---------- process ---------- */
+.proc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative;counter-reset:st}
+.proc::before{content:"";position:absolute;top:30px;inset-inline:12%;height:2px;background:linear-gradient(90deg,var(--mint),var(--teal))}
+.pst{position:relative;padding:0 18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.pst .dot{width:60px;height:60px;border-radius:20px;background:#fff;border:2px solid var(--mint);display:grid;place-items:center;font-family:var(--display);font-weight:800;color:var(--teal);font-size:18px;box-shadow:0 10px 24px -14px rgba(8,96,79,.5);position:relative}
+.pst h4{font-size:18px;font-weight:800}
+.pst p{margin:0;font-size:14.5px;color:var(--muted)}
+.pst ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.pst li{font-family:var(--mono);font-size:11px;padding:3px 9px;border-radius:999px;background:var(--mint-soft);color:var(--deep)}
+@media (max-width:860px){.proc{grid-template-columns:1fr 1fr;gap:28px 0}.proc::before{display:none}}
+@media (max-width:520px){.proc{grid-template-columns:1fr}}
+
+/* ---------- contact copy ---------- */
+.links a{color:#fff;text-decoration:none}
+.links .cp{margin-inline-start:auto;font:inherit;font-size:12px;font-weight:600;border:1px solid rgba(255,255,255,.25);background:transparent;color:var(--mint);border-radius:999px;padding:3px 10px;cursor:pointer}
+.links .cp:hover{background:rgba(255,255,255,.1)}
+.links div{align-items:center}
+.links #lnk-em{margin-inline-start:auto}
+.links .cp{margin-inline-start:0}
+
+/* ---------- KG query demo ---------- */
+.kgq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.kgq > *{min-width:0}
+#kgsvg{width:100%;height:auto;display:block;border-radius:18px;background:var(--mint-wash)}
+.kn{cursor:pointer}
+.kn circle{fill:#fff;stroke:#BCD0CA;stroke-width:1.6;transition:all .25s}
+.kn text{font-family:var(--mono);font-size:10px;
+}
+:root[data-lang="ar"] .kn text{font-family:var(--body);font-size:11px;
+fill:var(--muted);pointer-events:none;transition:fill .25s}
+.kn.law circle{stroke:var(--amber)}
+.kn.on circle{fill:var(--teal);stroke:var(--teal)}
+.kn.on text{fill:var(--fg);font-weight:600}
+.kn.path circle{fill:var(--mint-soft);stroke:var(--teal);stroke-width:2.2}
+.kn.path text{fill:var(--fg)}
+.ke{stroke:#D3E2DC;stroke-width:1.4;fill:none;transition:all .25s}
+.ke.on{stroke:var(--teal);stroke-width:2.4;stroke-dasharray:5 4}
+@media (prefers-reduced-motion:no-preference){.ke.on{animation:flow 1.2s linear infinite}}
+.kl{font-family:var(--mono);font-size:8.5px;fill:var(--muted);pointer-events:none}
+.cyph{font-family:var(--mono);font-size:12px;line-height:1.7;background:#0F2420;color:#CFE9E1;border-radius:14px;padding:14px 16px;white-space:pre-wrap;direction:ltr;text-align:left;margin:0;min-height:120px}
+.cyph .k{color:#5EE0C0}.cyph .s{color:#F2C879}.cyph .c{color:#7FA39A}
+.ans{padding:14px 16px;border-radius:14px;background:var(--mint-wash);font-size:14.5px;margin-top:12px}
+.ans .cite{margin-top:8px}
+.ans .cite span{background:#fff;border:1px solid var(--line)}
+.kgq .side p.hint{font-size:13px;color:var(--muted)}
+
+/* ---------- learning timeline ---------- */
+.tl{position:relative;padding-inline-start:28px;display:grid;gap:18px}
+.tl::before{content:"";position:absolute;inset-inline-start:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--mint),var(--line))}
+.tli{position:relative;display:grid;grid-template-columns:1fr auto;gap:2px 14px;align-items:center}
+.tli::before{content:"";position:absolute;inset-inline-start:-24px;top:9px;width:12px;height:12px;border-radius:50%;background:#fff;border:2.5px solid var(--teal);box-shadow:0 0 0 4px #fff}
+.tli.live::before{border-color:var(--amber);background:var(--amber)}
+.tli .when{grid-column:1;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--teal)}
+.tli h4{grid-column:1;font-family:var(--body);font-size:15.5px;font-weight:600;letter-spacing:0}
+.tli p{grid-column:1;margin:0;font-size:13px;color:var(--muted)}
+.tli .status{grid-row:1/4;grid-column:2;font-size:12px}
+.tli .pdf{display:inline-block;margin-inline-start:8px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+
+/* ---------- misc ---------- */
+.totop{position:fixed;z-index:24;inset-inline-start:clamp(16px,3vw,32px);bottom:calc(env(safe-area-inset-bottom,0px) + clamp(16px,3vw,32px));width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--teal);font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;box-shadow:0 10px 24px -14px rgba(8,96,79,.5)}
+.totop.show{opacity:1;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.khint{display:block;text-align:center;margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+@media (max-width:860px){.totop{display:none}.kgq{grid-template-columns:1fr}.khint{display:none}}
+
+/* ---------- contact form ---------- */
+.cmodal{position:fixed;inset:0;z-index:45;display:grid;place-items:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .3s}
+.cmodal.show{opacity:1;pointer-events:auto}
+.cmodal .bg{position:absolute;inset:0;background:rgba(13,31,27,.4);backdrop-filter:blur(4px)}
+.cform{position:relative;width:min(560px,100%);max-height:calc(100% - 32px);overflow-y:auto;background:#fff;border-radius:28px;padding:clamp(22px,4vw,36px);box-shadow:0 40px 90px -30px rgba(13,31,27,.5);transform:translateY(16px) scale(.98);transition:transform .4s var(--ease)}
+.cmodal.show .cform{transform:none}
+.cform h3{font-size:26px;font-weight:800;margin-bottom:6px}
+.cform > p{margin:0 0 20px;color:var(--muted);font-size:14.5px}
+.cform .x{position:absolute;top:18px;inset-inline-end:18px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:18px;cursor:pointer}
+.fld{display:grid;gap:6px;margin-bottom:14px}
+.fld label{font-size:13px;font-weight:600}
+.fld input,.fld textarea{font:inherit;font-size:14.5px;padding:11px 14px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);outline:none;width:100%;resize:vertical}
+.fld input:focus,.fld textarea:focus{border-color:var(--teal);background:#fff}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fbtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.fnote{margin:14px 0 0;font-size:12.5px;color:var(--muted)}
+.fnote b{color:var(--fg);font-family:var(--mono);font-weight:500}
+.sent{display:none;white-space:pre-wrap;padding:18px;border-radius:16px;background:var(--mint-wash);font-size:14.5px;margin-top:14px}
+.sent.show{display:block}
+@media (max-width:520px){.frow{grid-template-columns:1fr}}
+
+/* ---------- polish pass ---------- */
+.sec-head .eyebrow::before{content:attr(data-n) " — ";color:var(--muted);letter-spacing:.12em}
+:root[data-lang="ar"] .sec-head .eyebrow::before{letter-spacing:0}
+.btn.primary{background:linear-gradient(135deg,var(--fg),#143A33);position:relative;overflow:hidden}
+.btn.primary::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.18) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn.primary:hover::after{transform:translateX(120%)}
+.btn.ghost{border:1px solid transparent}
+.btn.ghost:hover{border-color:var(--mint)}
+.marquee{border-block:0;padding-block:0;margin:28px auto 0;width:calc(100% - 2*clamp(16px,4vw,48px));max-width:calc(1180px - 2*clamp(16px,4vw,48px));border-radius:999px;background:linear-gradient(90deg,#0B2E28,#0F4D42 50%,#0B2E28);box-shadow:0 24px 50px -30px rgba(8,96,79,.7),inset 0 1px 0 rgba(255,255,255,.08);-webkit-mask-image:none;mask-image:none;position:relative}
+.marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:1;pointer-events:none}
+.marquee::before{inset-inline-start:0;background:linear-gradient(90deg,#0B2E28,transparent);border-radius:999px 0 0 999px}
+.marquee::after{inset-inline-end:0;background:linear-gradient(270deg,#0B2E28,transparent);border-radius:0 999px 999px 0}
+:root[dir="rtl"] .marquee::before{background:linear-gradient(270deg,#0B2E28,transparent)}
+:root[dir="rtl"] .marquee::after{background:linear-gradient(90deg,#0B2E28,transparent)}
+.marquee .track{padding-block:18px;font-weight:700;font-size:19px;letter-spacing:.01em;color:var(--mint);text-shadow:0 0 18px rgba(45,212,174,.35)}
+.marquee .track span::before{content:"✦";color:#fff;opacity:.55;margin-inline-end:44px;font-size:11px}
+@media (prefers-reduced-motion:no-preference){
+  .marquee .track span{background:linear-gradient(90deg,var(--mint) 0 40%,#fff 50%,var(--mint) 60% 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+  .marquee .track span::before{-webkit-text-fill-color:#fff;-webkit-background-clip:border-box;background:none}
+  @keyframes shine{to{background-position:-260% 0}}
+}
+@media (max-width:860px){.marquee{border-radius:20px;margin-inline:16px}}
+.tile{background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gradient(160deg,#E6F2EE,#fff 40%,#CFEFE4) border-box;border:1px solid transparent;transform-style:preserve-3d;will-change:transform}
+.tile:hover{box-shadow:0 40px 70px -40px rgba(8,96,79,.5),0 0 0 1px rgba(45,212,174,.35)}
+.tile .art{box-shadow:inset 0 -1px 0 var(--line)}
+.scroll-cue{display:flex;align-items:center;gap:10px;margin-top:34px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+:root[data-lang="ar"] .scroll-cue{font-family:var(--body);letter-spacing:0;text-transform:none;font-size:12.5px}
+.scroll-cue i{width:22px;height:34px;border:1.5px solid #BCD0CA;border-radius:12px;position:relative}
+.scroll-cue i::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--teal)}
+@media (prefers-reduced-motion:no-preference){.scroll-cue i::after{animation:cue 1.8s ease-in-out infinite}@keyframes cue{50%{transform:translateY(12px);opacity:.2}}}
+#notes{background:var(--fg);color:#fff;border-radius:40px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px);position:relative;overflow:hidden}
+#notes::before{content:"";position:absolute;width:600px;height:600px;inset-inline-start:-200px;bottom:-320px;border-radius:50%;background:radial-gradient(circle,rgba(45,212,174,.28),rgba(45,212,174,0) 65%);pointer-events:none}
+#notes .sec-head p{color:#9FB8B1}
+#notes .eyebrow{color:var(--mint)}
+#notes .eyebrow::before{color:#7E9A92}
+#notes .note{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(6px)}
+#notes .note:hover{background:rgba(45,212,174,.12);border-color:rgba(45,212,174,.4)}
+#notes .note p{color:#B5C9C3}
+#notes .note .from{color:var(--mint)}
+#notes .note .n{color:var(--mint)}
+.pst{padding:22px;border-radius:24px;transition:background .3s,transform .4s var(--ease)}
+.pst:hover{background:var(--surface);transform:translateY(-4px)}
+.proc::before{inset-inline:14%;top:52px;z-index:0}.pst{z-index:1}.pst .dot{position:relative}
+.pst .dot{box-shadow:0 0 0 6px #fff,0 10px 24px -14px rgba(8,96,79,.5)}
+.kit div,.tli{transition:background .25s;border-radius:12px}
+.kit div:hover{background:var(--surface)}
+.kit div{padding-inline:8px;margin-inline:-8px}
+.sec-head h2 em{font-style:normal;background:linear-gradient(100deg,var(--mint),var(--teal) 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.contact{background:linear-gradient(145deg,#0D1F1B,#123C34)}
+.panel{border:1px solid rgba(255,255,255,.9)}
+.tabs button[aria-selected="true"]{background:linear-gradient(135deg,var(--fg),#143A33)}
+@media (max-width:860px){#notes{margin-inline:0;border-radius:24px}}
+
+/* ---------- award ---------- */
+.award{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:#8A5A00;background:linear-gradient(135deg,#FFF3D6,#FFE4A8);padding:5px 12px 5px 8px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(201,138,0,.25)}
+.award i{font-style:normal;width:18px;height:18px;border-radius:50%;background:#F2B705;display:grid;place-items:center;font-size:10px;color:#fff}
+.tile .award{margin-top:4px;align-self:flex-start}
+.drawer .award{margin:0 0 18px}
+.tli.gold::before{border-color:#F2B705;background:#F2B705}
+.tli.gold .when{color:#B07A00}
+
+/* ---------- recognition ---------- */
+#recog{padding-block:clamp(40px,6vw,72px)}
+.rec{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.rc{position:relative;padding:24px;border-radius:24px;background:linear-gradient(160deg,#FFFBF0,#FFF3D6);box-shadow:inset 0 0 0 1px rgba(201,138,0,.18);display:flex;flex-direction:column;gap:10px;min-width:0;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s}
+.rc:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px rgba(201,138,0,.35),0 24px 40px -30px rgba(201,138,0,.5)}
+.rc::after{content:"★";position:absolute;inset-inline-end:-6px;top:-18px;font-size:96px;color:rgba(242,183,5,.12);line-height:1}
+.rc .from{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#B07A00}
+:root[data-lang="ar"] .rc .from{font-family:var(--body);letter-spacing:0;text-transform:none;font-size:12.5px}
+.rc h4{font-size:17.5px;font-weight:800;line-height:1.25}
+.rc p{margin:0;font-size:13.5px;color:#6B5A2E}
+.rc .yr{margin-top:auto;padding-top:6px;font-family:var(--mono);font-size:12px;color:#8A5A00}
+@media (max-width:1000px){.rec{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.rec{grid-template-columns:1fr}}
+
+/* ---------- experience ---------- */
+.xp{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.xp > *{min-width:0}
+.xl{position:relative;padding-inline-start:30px;display:grid;gap:6px}
+.xl::before{content:"";position:absolute;inset-inline-start:9px;top:14px;bottom:14px;width:2px;background:linear-gradient(var(--mint),var(--line))}
+.xi{position:relative;display:grid;grid-template-columns:1fr auto;gap:2px 16px;align-items:start;padding:16px 18px;border-radius:18px;transition:background .25s}
+.xi:hover{background:var(--surface)}
+.xi::before{content:"";position:absolute;inset-inline-start:-26px;top:24px;width:12px;height:12px;border-radius:50%;background:#fff;border:2.5px solid var(--teal);box-shadow:0 0 0 4px #fff}
+.xi.now::before{background:var(--mint);border-color:var(--mint);box-shadow:0 0 0 4px #fff,0 0 0 8px rgba(45,212,174,.2)}
+.xi h4{grid-column:1;font-size:17px;font-weight:800;letter-spacing:-.01em}
+.xi .org{grid-column:1;font-size:14.5px;color:var(--fg);font-weight:500}
+.xi .org span.loc{color:var(--muted);font-weight:400}
+.xi p{grid-column:1;margin:4px 0 0;font-size:13.5px;color:var(--muted);max-width:52ch}
+.xi .when{grid-row:1/4;grid-column:2;font-family:var(--mono);font-size:11.5px;color:var(--teal);white-space:nowrap;padding-top:4px;text-align:end}
+.xi .dur{display:block;color:var(--muted);font-size:10.5px;margin-top:2px}
+.edu{padding:26px;border-radius:26px;background:linear-gradient(160deg,var(--mint-wash),var(--mint-soft));position:relative;overflow:hidden}
+.edu::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;inset-inline-end:-80px;bottom:-110px;background:radial-gradient(circle,rgba(45,212,174,.35),transparent 65%)}
+.edu .eyebrow{display:block;margin-bottom:14px}
+.edu h4{font-size:22px;font-weight:800;line-height:1.2}
+.edu .org{margin:8px 0 0;font-size:15px}
+.edu .when{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:12px;color:var(--deep);background:#fff;padding:4px 10px;border-radius:999px}
+.edu .cap{position:absolute;inset-inline-end:22px;top:22px;width:44px;height:44px;border-radius:14px;background:#fff;display:grid;place-items:center;font-size:22px}
+@media (max-width:860px){.xp{grid-template-columns:1fr}.xi{grid-template-columns:1fr}.xi .when{grid-row:auto;grid-column:1;text-align:start;padding:0 0 4px}}
+
+/* reveal: elements below the fold rise in; anything already on screen is left alone */
+.pre{transform:translateY(28px);opacity:0}
+.rv{transition:transform .9s var(--ease),opacity .9s var(--ease)}
+@media (prefers-reduced-motion:reduce){.pre{transform:none;opacity:1}}
+
+@media (max-width:980px){.notes{grid-template-columns:repeat(2,minmax(0,1fr))}.tile,.tile:nth-child(n){grid-column:span 12}}
+@media (max-width:860px){
+  .hero-grid,.two,.contact,.panel,.sec-head{grid-template-columns:1fr}
+  .stage{max-width:520px;margin-inline:auto;width:100%}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:8px}
+  nav{display:none}
+  .lang{margin-inline-start:auto}
+}
+@media (max-width:560px){
+  .tabs{flex-wrap:nowrap;overflow-x:auto}.tabs button{white-space:nowrap;padding:8px 14px}
+  .notes,.viz{grid-template-columns:1fr}
+  .meta{grid-template-columns:1fr}
+  .kit div{grid-template-columns:1fr;gap:2px}
+  .rank li{grid-template-columns:24px 1fr}.rank .bars{grid-column:2}
+  .art{height:190px}
+}
+</style>
+
+<header class="bar" id="bar">
+  <div class="wrap">
+    <a class="mark" href="#top"><i>n</i><span class="en">Nawaf Alhussain</span><span class="ar">نواف آل حسين</span></a>
+    <nav>
+      <a href="#work"><span class="en">Work</span><span class="ar">الأعمال</span></a>
+      <a href="#demos"><span class="en">Demos</span><span class="ar">التجارب</span></a>
+      <a href="#notes"><span class="en">Notes</span><span class="ar">الدروس</span></a>
+      <a href="#process"><span class="en">Process</span><span class="ar">المنهج</span></a>
+      <a href="#experience"><span class="en">Experience</span><span class="ar">الخبرات</span></a>
+      <a href="#about"><span class="en">Toolkit</span><span class="ar">الأدوات</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="ar">تواصل</span></a>
+    </nav>
+    <button class="lang" id="langBtn" type="button" aria-label="Switch language"><span class="en">العربية</span><span class="ar">English</span></button>
+  </div>
+  <div class="progress" id="prog"></div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow"><span class="en">Lead AI Data Scientist · Riyadh</span><span class="ar">قائد علماء البيانات للذكاء الاصطناعي · الرياض</span></p>
+        <h1 class="d"><span class="en" aria-label="Nawaf Alhussain"><span class="w"><span class="ch" style="animation-delay:0.08s">N</span><span class="ch" style="animation-delay:0.12s">a</span><span class="ch" style="animation-delay:0.17s">w</span><span class="ch" style="animation-delay:0.22s">a</span><span class="ch" style="animation-delay:0.26s">f</span></span><span class="w"><span class="ch" style="animation-delay:0.35s">A</span><span class="ch" style="animation-delay:0.39s">l</span><span class="ch" style="animation-delay:0.44s">h</span><span class="ch" style="animation-delay:0.48s">u</span><span class="ch" style="animation-delay:0.53s">s</span><span class="ch" style="animation-delay:0.57s">s</span><span class="ch" style="animation-delay:0.62s">a</span><span class="ch" style="animation-delay:0.67s">i</span><span class="ch" style="animation-delay:0.71s">n</span></span></span><span class="ar-name"><span class="ch" style="animation-delay:.42s">نواف آل حسين</span></span></h1>
+        <p class="thesis"><span class="en">I build AI that <em>understands the business</em>, not just the data.</span><span class="ar">أبني ذكاءً اصطناعياً <em>يفهم العمل</em>، لا البيانات فقط.</span></p>
+        <p class="role"><span class="en">Agents, machine learning and analytics at <strong>Channels by STC</strong>.</span><span class="ar">وكلاء وتعلم آلة وتحليلات في <strong>قنوات STC</strong>.</span></p>
+        <div class="cta">
+          <a class="btn primary" href="#work"><span class="en">View projects</span><span class="ar">استعرض المشاريع</span> <span class="arr">→</span></a>
+          <a class="btn ghost" href="#demos"><span class="en">Try live demos</span><span class="ar">جرّب النماذج الحية</span></a>
+          <button class="btn ghost open-contact" type="button"><span class="en">Message me</span><span class="ar">راسلني</span></button>
+        </div>
+        <div class="scroll-cue"><i></i><span class="en">Scroll to explore</span><span class="ar">مرّر للاستكشاف</span></div>
+      </div>
+      <div class="stage">
+        <canvas id="hg" aria-label="Animated knowledge graph of projects and skills" role="img"></canvas>
+        <div class="tip" id="tip"><em id="tipK"></em><b id="tipT"></b><span id="tipD"></span></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b data-count="6">6<small>+</small></b><span><span class="en">years in data &amp; AI</span><span class="ar">سنوات في البيانات والذكاء الاصطناعي</span></span></div>
+      <div class="stat"><b data-count="2">2</b><span><span class="en">AI systems in production</span><span class="ar">نظامان في الإنتاج</span></span></div>
+      <div class="stat"><b data-count="0.94" data-dec="2">0.94</b><span><span class="en">retrieval precision, RAGAS</span><span class="ar">دقة الاسترجاع</span></span></div>
+      <div class="stat"><b data-count="900" data-suf="K">900<small>K</small></b><span><span class="en">forecast series managed</span><span class="ar">سلسلة تنبؤ مُدارة</span></span></div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true"><div class="track">
+    <span>LangGraph</span><span>Agentic RAG</span><span>Knowledge Graphs</span><span>Arabic NLP</span><span>Text-to-SQL</span><span>Demand Forecasting</span><span>Neo4j</span><span>Airflow</span><span>RAGAS</span><span>GraphRAG</span>
+    <span>LangGraph</span><span>Agentic RAG</span><span>Knowledge Graphs</span><span>Arabic NLP</span><span>Text-to-SQL</span><span>Demand Forecasting</span><span>Neo4j</span><span>Airflow</span><span>RAGAS</span><span>GraphRAG</span>
+  </div></div>
+
+  <section id="work" class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow"><span class="en">Selected work</span><span class="ar">أعمال مختارة</span></p><h2><span class="en">Four systems, <em>built end to end</em></span><span class="ar">أربعة أنظمة <em>بُنيت من البداية إلى النهاية</em></span></h2></div>
+      <p><span class="en">Open any project for the full case study: problem, approach, architecture and results.</span><span class="ar">افتح أي مشروع لقراءة دراسة الحالة كاملة بمشكلتها ونهجها وبنيتها ونتائجها.</span></p>
+    </div>
+    <div class="tiles">
+      <button class="tile" type="button" data-case="musaed">
+        <div class="art" data-mock="musaed"></div>
+        <div class="tile-body">
+          <div class="tile-top"><span class="status"><span class="en">In production</span><span class="ar">في الإنتاج</span></span><span class="eyebrow">LangGraph · Azure</span></div>
+          <h3>MusaedAI <span class="ar">· مساعد Ai</span></h3>
+          <p><span class="en">A bilingual HR assistant that answers policy questions and completes requests end to end.</span><span class="ar">مساعد موارد بشرية ثنائي اللغة يجيب عن أسئلة السياسات وينفّذ الطلبات بالكامل.</span></p>
+          <div class="kpis"><div class="kpi"><b>0.94</b><span><span class="en">context precision</span><span class="ar">دقة السياق</span></span></div><div class="kpi"><b>23+</b><span><span class="en">services live</span><span class="ar">خدمة مفعّلة</span></span></div><div class="kpi"><b>AR·EN</b><span><span class="en">one assistant</span><span class="ar">مساعد واحد</span></span></div></div>
+          <span class="open"><span class="en">Read case study</span><span class="ar">اقرأ دراسة الحالة</span> <span class="arr">→</span></span>
+        </div>
+      </button>
+
+      <button class="tile" type="button" data-case="emdad">
+        <div class="art" data-mock="emdad"></div>
+        <div class="tile-body">
+          <div class="tile-top"><span class="status"><span class="en">In production</span><span class="ar">في الإنتاج</span></span><span class="eyebrow">Forecasting</span></div>
+          <h3>Emdad <span class="ar">· إمداد</span></h3>
+          <p><span class="en">Demand planning and smart replenishment across a national retail network.</span><span class="ar">تخطيط الطلب والتزويد الذكي لشبكة بيع على مستوى المملكة.</span></p>
+          <span class="award"><i>★</i><span class="en">Project Champion 2025 · Technology &amp; Operations</span><span class="ar">بطل مشاريع 2025 · قطاع التقنية والعمليات</span></span>
+          <div class="kpis"><div class="kpi"><b>~300</b><span><span class="en">branches</span><span class="ar">فرع</span></span></div><div class="kpi"><b>900K</b><span><span class="en">series</span><span class="ar">سلسلة</span></span></div></div>
+          <span class="open"><span class="en">Read case study</span><span class="ar">اقرأ دراسة الحالة</span> <span class="arr">→</span></span>
+        </div>
+      </button>
+
+      <button class="tile" type="button" data-case="sales">
+        <div class="art" data-mock="sales"></div>
+        <div class="tile-body">
+          <div class="tile-top"><span class="status"><span class="en">Internal pilot</span><span class="ar">تجربة داخلية</span></span><span class="eyebrow">Text-to-SQL</span></div>
+          <h3>Sales Insight Agent</h3>
+          <p><span class="en">Ask sales questions in Arabic and get correct SQL and answers. No data leaves the building.</span><span class="ar">اسأل عن المبيعات بالعربية واحصل على استعلام صحيح وإجابة، دون أن تغادر البيانات الشركة.</span></p>
+          <div class="kpis"><div class="kpi"><b>4.48M</b><span><span class="en">rows</span><span class="ar">صف</span></span></div><div class="kpi"><b>0</b><span><span class="en">external APIs</span><span class="ar">اتصال خارجي</span></span></div></div>
+          <span class="open"><span class="en">Read case study</span><span class="ar">اقرأ دراسة الحالة</span> <span class="arr">→</span></span>
+        </div>
+      </button>
+
+      <button class="tile" type="button" data-case="kg">
+        <div class="art" data-mock="kg"></div>
+        <div class="tile-body">
+          <div class="tile-top"><span class="status build"><span class="en">In development</span><span class="ar">قيد التطوير</span></span><span class="eyebrow">SKOS · Neo4j</span></div>
+          <h3>HR Policy Knowledge Graph</h3>
+          <p><span class="en">Every policy clause linked to the labour-law article behind it, so answers can cite both.</span><span class="ar">كل بند في السياسة مرتبط بمادة نظام العمل التي يستند إليها، لتستشهد الإجابات بالمصدرين.</span></p>
+          <span class="open"><span class="en">Read case study</span><span class="ar">اقرأ دراسة الحالة</span> <span class="arr">→</span></span>
+        </div>
+      </button>
+    </div>
+    <div class="also"><span class="muted"><span class="en">Also building:</span><span class="ar">أعمل أيضاً على:</span></span>
+      <span class="pill"><span class="en">GRPO fine-tuning on Qwen2.5</span><span class="ar">ضبط GRPO على Qwen2.5</span></span>
+      <span class="pill"><span class="en">GraphRAG vs RAG evaluation</span><span class="ar">مقارنة GraphRAG بالاسترجاع التقليدي</span></span>
+      <span class="pill"><span class="en">Arabic NLP research graph on arXiv</span><span class="ar">رسم معرفي لأبحاث العربية في arXiv</span></span>
+    </div>
+  </section>
+
+  <section id="recog" class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow"><span class="en">Recognition</span><span class="ar">التكريم</span></p><h2><span class="en">Recognised for <em>delivery</em></span><span class="ar">تكريم على <em>الإنجاز</em></span></h2></div>
+      <p><span class="en">Project and sector champion honours at Channels by STC, alongside appreciation from executive leadership.</span><span class="ar">تكريمات أبطال المشاريع والقطاع في قنوات STC، إلى جانب تقدير من القيادة التنفيذية.</span></p>
+    </div>
+    <div class="rec">
+      <div class="rc"><span class="from"><span class="en">Technology &amp; Operations · 2025</span><span class="ar">قطاع التقنية والعمليات · 2025</span></span><h4><span class="en">Project Champion · Emdad</span><span class="ar">بطل المشاريع · إمداد</span></h4><p><span class="en">Honoured at the annual project champions ceremony by the Deputy CEO for delivering Emdad.</span><span class="ar">تكريم في الحفل السنوي لأبطال المشاريع من نائب الرئيس عن إنجاز مشروع إمداد.</span></p><span class="yr">Dec 2025</span></div>
+      <div class="rc"><span class="from"><span class="en">Technology &amp; Operations</span><span class="ar">قطاع التقنية والعمليات</span></span><h4><span class="en">Sector Champion, multiple times</span><span class="ar">بطل القطاع، أكثر من مرة</span></h4><p><span class="en">Named the sector's champion of the month on several occasions for impact and delivery.</span><span class="ar">اختير بطلاً للقطاع في الترشيح الشهري أكثر من مرة تقديراً للأثر والإنجاز.</span></p><span class="yr"><span class="en">Monthly recognition</span><span class="ar">تكريم شهري</span></span></div>
+      <div class="rc"><span class="from"><span class="en">Chief Executive Officer</span><span class="ar">الرئيس التنفيذي</span></span><h4><span class="en">AI initiative leadership</span><span class="ar">قيادة مبادرة الذكاء الاصطناعي</span></h4><p><span class="en">Appreciation from the CEO for distinguished effort and effective leadership of the company's AI initiative.</span><span class="ar">تقدير من الرئيس التنفيذي على الجهود المميزة والقيادة الفعّالة في مبادرة الذكاء الاصطناعي.</span></p><span class="yr">Channels by STC</span></div>
+      <div class="rc"><span class="from"><span class="en">Technology &amp; Operations</span><span class="ar">قطاع التقنية والعمليات</span></span><h4><span class="en">PDPL compliance project</span><span class="ar">مشروع الامتثال لنظام حماية البيانات</span></h4><p><span class="en">Recognised for delivering the Personal Data Protection Law (PDPL) project, where data governance meets production systems.</span><span class="ar">تكريم على إنجاز مشروع نظام حماية البيانات الشخصية (PDPL)، حيث تلتقي حوكمة البيانات بأنظمة الإنتاج.</span></p><span class="yr">Channels by STC</span></div>
+    </div>
+  </section>
+
+  <section id="demos" class="wrap">
+    <div class="inner">
+    <div class="sec-head">
+      <div><p class="eyebrow"><span class="en">Live demos</span><span class="ar">نماذج حية</span></p><h2><span class="en">Ideas you can <em>touch</em></span><span class="ar">أفكار <em>يمكنك تجربتها</em></span></h2></div>
+      <p><span class="en">Small working models of the techniques inside the projects.</span><span class="ar">نماذج صغيرة تعمل للتقنيات المستخدمة داخل المشاريع.</span></p>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-route" aria-selected="true" aria-controls="p-route"><span class="en">Agent routing</span><span class="ar">توجيه الوكلاء</span></button>
+      <button role="tab" id="tab-ret" aria-selected="false" aria-controls="p-ret"><span class="en">Hybrid search</span><span class="ar">البحث الهجين</span></button>
+      <button role="tab" id="tab-sbc" aria-selected="false" aria-controls="p-sbc"><span class="en">Demand patterns</span><span class="ar">أنماط الطلب</span></button>
+      <button role="tab" id="tab-kg" aria-selected="false" aria-controls="p-kg"><span class="en">Policy graph</span><span class="ar">رسم السياسات</span></button>
+    </div>
+
+    <div class="panel" id="p-route" role="tabpanel" aria-labelledby="tab-route">
+      <div class="side">
+        <p class="eyebrow">MusaedAI · LangGraph</p>
+        <h3><span class="en">Trace a question through the agents</span><span class="ar">تتبّع سؤالاً عبر الوكلاء</span></h3>
+        <p><span class="en">Pick a message. The router chooses a specialist agent, which calls one tool.</span><span class="ar">اختر رسالة، فيختار الموجّه وكيلاً متخصصاً يستدعي أداة واحدة.</span></p>
+        <div class="q-list" id="qList"></div>
+      </div>
+      <div>
+        <svg id="flow" viewBox="0 0 420 200" aria-label="Agent routing diagram"></svg>
+        <div class="t-out"><span class="eyebrow"><span class="en">Returns</span><span class="ar">النتيجة</span></span><span id="tOut"></span></div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-ret" role="tabpanel" aria-labelledby="tab-ret" hidden>
+      <div class="side">
+        <p class="eyebrow">MusaedAI · Retrieval</p>
+        <h3><span class="en">Why one search method is not enough</span><span class="ar">لماذا لا تكفي طريقة بحث واحدة</span></h3>
+        <p><span class="en">Keywords catch article numbers but miss paraphrases. Semantic search catches meaning but drifts. Fusing both rankings keeps the best of each.</span><span class="ar">الكلمات المفتاحية تلتقط أرقام المواد وتفوّت إعادة الصياغة، والبحث الدلالي يلتقط المعنى لكنه ينجرف، ودمج الترتيبين يجمع أفضل ما فيهما.</span></p>
+        <div class="query"><span class="en">“Article 151: how long is maternity leave?”</span><span class="ar">«المادة ١٥١: كم مدة إجازة الوضع؟»</span></div>
+        <div class="seg" role="group" aria-label="Retrieval method">
+          <button type="button" data-m="bm">BM25</button><button type="button" data-m="de"><span class="en">Semantic</span><span class="ar">دلالي</span></button><button type="button" data-m="hyb" aria-pressed="true"><span class="en">Hybrid</span><span class="ar">هجين</span></button>
+        </div>
+        <div class="score-k"><b id="rk">2/2</b><span class="muted" style="font-size:13px"><span class="en">relevant in top 2</span><span class="ar">ذات صلة في أعلى نتيجتين</span></span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="legend"><span>BM25</span><span><span class="en">Semantic</span><span class="ar">دلالي</span></span></div>
+        <ol class="rank" id="rank"></ol>
+        <p class="fine"><span class="en">Illustrative scores on a five-passage sample.</span><span class="ar">درجات توضيحية على عينة من خمسة مقاطع.</span></p>
+      </div>
+    </div>
+
+    <div class="panel" id="p-sbc" role="tabpanel" aria-labelledby="tab-sbc" hidden>
+      <div class="side">
+        <p class="eyebrow">Emdad · Syntetos-Boylan</p>
+        <h3><span class="en">Classify a demand pattern</span><span class="ar">صنّف نمط الطلب</span></h3>
+        <p><span class="en">Simulate a year of weekly sales. The pattern decides which forecasting method fits.</span><span class="ar">حاكِ مبيعات سنة أسبوعاً بأسبوع، فنمط الطلب هو ما يحدد طريقة التنبؤ المناسبة.</span></p>
+        <label class="ctrl" for="pSale"><span><span class="en">Weeks with a sale</span><span class="ar">أسابيع فيها بيع</span></span><output id="pOut">70%</output><input type="range" id="pSale" min="15" max="100" value="70"></label>
+        <label class="ctrl" for="vSize"><span><span class="en">Order-size swings</span><span class="ar">تذبذب حجم الطلب</span></span><output id="vOut">0.40</output><input type="range" id="vSize" min="5" max="150" value="40"></label>
+      </div>
+      <div>
+        <div class="viz">
+          <svg id="series" viewBox="0 0 260 130" aria-label="Simulated weekly demand"></svg>
+          <svg id="quad" viewBox="0 0 160 130" aria-label="ADI versus CV squared"></svg>
+        </div>
+        <div class="verdict"><b id="cls">Smooth</b><code id="stats"></code></div>
+        <p id="advice"></p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+    <div class="panel" id="p-kg" role="tabpanel" aria-labelledby="tab-kg" hidden>
+      <div class="side">
+        <p class="eyebrow">HR Policy KG · Neo4j</p>
+        <h3><span class="en">Ask the graph, not the document</span><span class="ar">اسأل الرسم لا الوثيقة</span></h3>
+        <p><span class="en">Click any node. The page writes the Cypher query that walks the graph and returns an answer with both its policy clause and its Labor Law article.</span><span class="ar">انقر أي عقدة، فتكتب الصفحة استعلام Cypher الذي يسير في الرسم ويعيد إجابة مع بند السياسة ومادة نظام العمل معاً.</span></p>
+        <pre class="cyph" id="cyph"></pre>
+        <div class="ans" id="kgAns"></div>
+      </div>
+      <div><svg id="kgsvg" viewBox="0 0 440 340" aria-label="HR policy knowledge graph"></svg><p class="fine" style="margin-top:8px"><span class="en">Sample graph. Amber nodes are Labor Law articles, teal nodes are company policy.</span><span class="ar">رسم تجريبي؛ العقد الكهرمانية مواد نظام العمل والخضراء سياسة الشركة.</span></p></div>
+    </div>
+
+  <section id="notes" class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow"><span class="en">Field notes</span><span class="ar">دروس ميدانية</span></p><h2><span class="en">Lessons from <em>shipping</em></span><span class="ar">دروس من <em>التشغيل الفعلي</em></span></h2></div>
+    </div>
+    <div class="notes">
+      <article class="note"><span class="n">01</span><h4><span class="en">Forms beat chat for requests</span><span class="ar">النموذج أفضل من المحادثة في الطلبات</span></h4><p><span class="en">Structured requests open as a pre-filled form the employee confirms in one step.</span><span class="ar">تُفتح الطلبات المنظمة نموذجاً معبأً يؤكده الموظف بخطوة واحدة.</span></p><span class="from">MusaedAI</span></article>
+      <article class="note"><span class="n">02</span><h4><span class="en">Documents can carry attacks</span><span class="ar">الوثائق قد تحمل هجمات</span></h4><p><span class="en">Retrieved text is data, never instructions. Agent permissions follow the caller's own token.</span><span class="ar">النص المسترجع بيانات لا أوامر، وصلاحيات الوكيل تتبع رمز المستخدم نفسه.</span></p><span class="from">MusaedAI</span></article>
+      <article class="note"><span class="n">03</span><h4><span class="en">Score retrieval and generation apart</span><span class="ar">قِس الاسترجاع والتوليد منفصلين</span></h4><p><span class="en">Retrieval hit 0.94 while faithfulness sat at 0.83, so the next gain was in generation.</span><span class="ar">بلغ الاسترجاع 0.94 والأمانة 0.83، فكان التحسين التالي في التوليد.</span></p><span class="from">MusaedAI</span></article>
+      <article class="note"><span class="n">04</span><h4><span class="en">A bad join looks like growth</span><span class="ar">الربط الخاطئ يبدو كأنه نمو</span></h4><p><span class="en">Duplicate rows inflated revenue silently. Text-to-SQL needs clean views underneath.</span><span class="ar">ضخّمت الصفوف المكررة الإيرادات بصمت، فتحويل النص إلى استعلام يحتاج طبقة نظيفة.</span></p><span class="from">Sales Insight Agent</span></article>
+    </div>
+  </section>
+
+  <section id="process" class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow"><span class="en">How I work</span><span class="ar">كيف أعمل</span></p><h2><span class="en">From question <em>to production</em></span><span class="ar">من السؤال <em>إلى الإنتاج</em></span></h2></div>
+      <p><span class="en">The same loop behind every system on this page.</span><span class="ar">الحلقة نفسها خلف كل نظام في هذه الصفحة.</span></p>
+    </div>
+    <div class="proc">
+      <div class="pst"><div class="dot">01</div><h4><span class="en">Frame the decision</span><span class="ar">تحديد القرار</span></h4><p><span class="en">Start from the decision someone needs to make, not from the model. Which branch gets stock? Which policy article applies?</span><span class="ar">أبدأ من القرار الذي يحتاجه صاحب العمل لا من النموذج: أي فرع يُزوَّد؟ أي مادة تنطبق؟</span></p><ul><li>stakeholders</li><li>CPMAI</li></ul></div>
+      <div class="pst"><div class="dot">02</div><h4><span class="en">Get the data right</span><span class="ar">ضبط البيانات</span></h4><p><span class="en">Clean, deduplicated, governed layers before any AI. Most failures I have seen were data failures wearing an AI costume.</span><span class="ar">طبقات نظيفة ومُحوكمة قبل أي ذكاء اصطناعي، فأغلب الإخفاقات التي رأيتها كانت مشكلات بيانات بثوب الذكاء الاصطناعي.</span></p><ul><li>Medallion</li><li>SQL</li><li>DAMA</li></ul></div>
+      <div class="pst"><div class="dot">03</div><h4><span class="en">Build and measure</span><span class="ar">البناء والقياس</span></h4><p><span class="en">Agents, retrieval and forecasts are built with an evaluation harness from day one, so every change has a number.</span><span class="ar">أبني الوكلاء والاسترجاع والتوقعات مع منظومة تقييم من اليوم الأول، فلكل تغيير رقم يُقاس به.</span></p><ul><li>LangGraph</li><li>RAGAS</li><li>backtests</li></ul></div>
+      <div class="pst"><div class="dot">04</div><h4><span class="en">Ship and harden</span><span class="ar">النشر والتحصين</span></h4><p><span class="en">Containerised, scheduled, monitored and security-reviewed. A demo is not done until employees use it every day.</span><span class="ar">حاويات وجدولة ومراقبة ومراجعة أمنية، فالنموذج التجريبي لا يكتمل حتى يستخدمه الموظفون يومياً.</span></p><ul><li>Docker</li><li>Airflow</li><li>security review</li></ul></div>
+    </div>
+  </section>
+
+  <section id="experience" class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow"><span class="en">Experience</span><span class="ar">الخبرات</span></p><h2><span class="en">Where I've <em>worked</em></span><span class="ar">أين <em>عملت</em></span></h2></div>
+      <p><span class="en">From data analysis to leading AI in production.</span><span class="ar">من تحليل البيانات إلى قيادة الذكاء الاصطناعي في الإنتاج.</span></p>
+    </div>
+    <div class="xp">
+      <div class="xl">
+        <div class="xi now"><h4><span class="en">Senior Data Scientist</span><span class="ar">عالم بيانات أول</span></h4><div class="org">Channels by STC <span class="loc">· <span class="en">Riyadh</span><span class="ar">الرياض</span></span></div><p><span class="en">Leads the company's AI work end to end: owns MusaedAI, Emdad and the Sales Insight Agent from design to production, and drives the AI initiative recognised by the CEO.</span><span class="ar">يقود أعمال الذكاء الاصطناعي في الشركة من البداية إلى النهاية: يملك مساعد Ai وإمداد ووكيل رؤى المبيعات من التصميم إلى الإنتاج، ويقود مبادرة الذكاء الاصطناعي التي حظيت بتقدير الرئيس التنفيذي.</span></p><span class="when">2022 – <span class="en">present</span><span class="ar">الآن</span></span></div>
+        <div class="xi"><h4><span class="en">Data Analyst</span><span class="ar">محلل بيانات</span></h4><div class="org">PrimeGate for Communications and IT <span class="loc">· <span class="en">Riyadh</span><span class="ar">الرياض</span></span></div><p><span class="en">Data analysis and reporting.</span><span class="ar">تحليل البيانات وإعداد التقارير.</span></p><span class="when">Apr – Aug 2022<span class="dur">5 <span class="en">months</span><span class="ar">أشهر</span></span></span></div>
+        <div class="xi"><h4><span class="en">Analyst</span><span class="ar">محلل</span></h4><div class="org"><span class="en">Prince Sattam bin Abdulaziz University</span><span class="ar">جامعة الأمير سطام بن عبدالعزيز</span></div><span class="when">Jul 2020 – Dec 2021<span class="dur">1.5 <span class="en">years</span><span class="ar">سنة</span></span></span></div>
+        <div class="xi"><h4><span class="en">Trainee</span><span class="ar">متدرب</span></h4><div class="org"><span class="en">Ministry of Communications and Information Technology</span><span class="ar">وزارة الاتصالات وتقنية المعلومات</span> <span class="loc">· <span class="en">Riyadh</span><span class="ar">الرياض</span></span></div><span class="when">Jan – Apr 2020<span class="dur">4 <span class="en">months</span><span class="ar">أشهر</span></span></span></div>
+      </div>
+      <div class="edu">
+        <span class="cap">🎓</span>
+        <span class="eyebrow"><span class="en">Education</span><span class="ar">التعليم</span></span>
+        <h4><span class="en">BSc in Information Systems</span><span class="ar">بكالوريوس نظم المعلومات</span></h4>
+        <p class="org"><span class="en">Prince Sattam bin Abdulaziz University</span><span class="ar">جامعة الأمير سطام بن عبدالعزيز</span></p>
+        <span class="when">2016 – 2020</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="wrap">
+    <div class="two">
+      <div>
+        <p class="eyebrow"><span class="en">Toolkit</span><span class="ar">الأدوات</span></p>
+        <h2><span class="en">What I build with</span><span class="ar">ما أبني به</span></h2>
+        <dl class="kit">
+          <div><dt><span class="en">Analysis</span><span class="ar">التحليل</span></dt><dd>EDA · pandas · feature engineering · hypothesis testing · Streamlit dashboards</dd></div>
+          <div><dt><span class="en">Time series</span><span class="ar">السلاسل الزمنية</span></dt><dd>Seasonal decomposition · SARIMAX · Random Forest · Syntetos-Boylan · backtesting</dd></div>
+          <div><dt><span class="en">Agents</span><span class="ar">الوكلاء</span></dt><dd>LangGraph · LangChain · Azure OpenAI · Ollama · FastAPI</dd></div>
+          <div><dt><span class="en">Retrieval</span><span class="ar">الاسترجاع</span></dt><dd>Azure AI Search · BGE-M3 · BM25 · ChromaDB · RAGAS</dd></div>
+          <div><dt><span class="en">Knowledge engineering</span><span class="ar">هندسة المعرفة</span></dt><dd>Ontology design · controlled vocabularies · RDF · OWL · SKOS · SPARQL · LLM entity extraction</dd></div>
+          <div><dt><span class="en">Graph systems</span><span class="ar">أنظمة الرسوم</span></dt><dd>Neo4j · Cypher · GraphRAG · graph-grounded answers</dd></div>
+          <div><dt><span class="en">Fine-tuning</span><span class="ar">الضبط الدقيق</span></dt><dd>GRPO · DPO · LoRA · Qwen2.5</dd></div>
+          <div><dt><span class="en">Platform</span><span class="ar">المنصة</span></dt><dd>SQL Server · Airflow · Docker · Medallion · Git</dd></div>
+        </dl>
+      </div>
+      <div>
+        <p class="eyebrow"><span class="en">Credentials</span><span class="ar">الشهادات</span></p>
+        <h2><span class="en">Always learning</span><span class="ar">تعلّم مستمر</span></h2>
+        <div class="tl">
+          <div class="tli live"><span class="when">2026 · <span class="en">now</span><span class="ar">الآن</span></span><h4>CDMP · DAMA</h4><p><span class="en">Data management fundamentals, then Data Quality &amp; Governance</span><span class="ar">أساسيات إدارة البيانات ثم جودة البيانات وحوكمتها</span></p><span class="status build"><span class="en">In progress</span><span class="ar">قيد الإنجاز</span></span></div>
+          <div class="tli"><span class="when">Sep – Oct 2026</span><h4>Knowledge Graph Academy</h4><p><span class="en">6-week live course: RDF, SKOS, OWL, SPARQL, agents capstone</span><span class="ar">دورة حية ستة أسابيع: RDF وSKOS وOWL وSPARQL ومشروع ختامي بالوكلاء</span></p><span class="status"><span class="en">Completed</span><span class="ar">مكتمل</span></span></div>
+          <div class="tli"><span class="when">Aug 2026</span><h4>Neo4j GraphAcademy</h4><p><span class="en">Building KGs with LLMs · GraphRAG for Python</span><span class="ar">بناء الرسوم المعرفية بالنماذج اللغوية · GraphRAG بلغة Python</span></p><span class="status"><span class="en">2 courses</span><span class="ar">دورتان</span></span></div>
+          <div class="tli"><span class="when">Jul 2026</span><h4>PMI-CPMAI</h4><p><span class="en">Cognitive Project Management for AI · Project Management Institute</span><span class="ar">إدارة مشاريع الذكاء الاصطناعي · معهد إدارة المشاريع</span></p><span class="status"><span class="en">Certified</span><span class="ar">معتمد</span></span></div>
+          <div class="tli gold"><span class="when">Dec 2025</span><h4><span class="en">Project Champion · Emdad</span><span class="ar">بطل المشاريع · إمداد</span></h4><p><span class="en">Annual project champions ceremony, Technology &amp; Operations, Channels by STC</span><span class="ar">الحفل السنوي لأبطال المشاريع، قطاع التقنية والعمليات، قنوات STC</span></p><span class="status" style="color:#8A5A00;background:#FFE4A8"><span class="en">Award</span><span class="ar">جائزة</span></span></div>
+          <div class="tli"><span class="when">Udacity</span><h4>Generative AI Nanodegree</h4><p><span class="en">Capstone: GRPO fine-tuning of Qwen2.5 with LoRA</span><span class="ar">المشروع الختامي: ضبط Qwen2.5 بطريقة GRPO مع LoRA</span></p><span class="status"><span class="en">Completed</span><span class="ar">مكتمل</span></span></div>
+          <div class="tli"><span class="when">Udacity</span><h4>Business Analytics Nanodegree</h4><p><span class="en">Data analysis, SQL, visualisation and business storytelling</span><span class="ar">تحليل البيانات وSQL والتصوير البياني وسرد الأعمال</span></p><span class="status"><span class="en">Completed</span><span class="ar">مكتمل</span></span></div>
+          <div class="tli"><span class="when">Misk</span><h4>Data Science Immersive Program</h4><p><span class="en">Misk Academy · intensive data science bootcamp</span><span class="ar">أكاديمية مسك · برنامج علم البيانات المكثف</span></p><span class="status"><span class="en">Completed</span><span class="ar">مكتمل</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section id="contact" class="contact">
+      <div>
+        <p class="eyebrow" style="color:var(--mint)"><span class="en">Contact</span><span class="ar">تواصل</span></p>
+        <h2><span class="en">Let's build something <em>that ships</em>.</span><span class="ar">لنبنِ شيئاً <em>يصل إلى الإنتاج</em>.</span></h2>
+        <p><span class="en">Open to conversations on production AI, Arabic language systems and knowledge graphs for decision support.</span><span class="ar">يسعدني الحديث عن الذكاء الاصطناعي في الإنتاج وأنظمة اللغة العربية والرسوم المعرفية لدعم القرار.</span></p>
+      </div>
+      <div class="links">
+        <button class="btn primary open-contact" type="button" style="justify-content:center;background:var(--mint);color:var(--fg);box-shadow:none"><span class="en">Send me a message</span><span class="ar">أرسل لي رسالة</span> <span class="arr">→</span></button>
+        <div><span>LinkedIn</span><a id="lnk-li" href="https://www.linkedin.com/in/nawaf-alhussain" target="_blank" rel="noopener">linkedin.com/in/nawaf-alhussain</a></div>
+        <div><span><span class="en">Email</span><span class="ar">البريد</span></span><span id="lnk-em">nawaf.alhussain2@gmail.com</span><button class="cp" type="button" id="cpEm"><span class="en">Copy</span><span class="ar">نسخ</span></button></div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="wrap">© 2026 Nawaf Alhussain · <span class="en">Riyadh</span><span class="ar">الرياض</span></footer>
+
+<button class="totop" id="totop" type="button" aria-label="Back to top">↑</button>
+<nav class="dock" aria-label="Sections">
+  <a href="#work"><span class="en">Work</span><span class="ar">الأعمال</span></a>
+  <a href="#demos"><span class="en">Demos</span><span class="ar">التجارب</span></a>
+  <a href="#notes"><span class="en">Notes</span><span class="ar">الدروس</span></a>
+  <a href="#contact"><span class="en">Contact</span><span class="ar">تواصل</span></a>
+</nav>
+
+<button class="ask-fab" id="askFab" type="button" aria-controls="ask"><i>✦</i><span class="lbl"><span class="en">Ask about Nawaf</span><span class="ar">اسأل عن نواف</span></span></button>
+<div class="ask" id="ask" role="dialog" aria-label="Ask about Nawaf" aria-hidden="true">
+  <header><i>n</i><div><b><span class="en">Ask about Nawaf</span><span class="ar">اسأل عن نواف</span></b><small><span class="en">Answers come only from this portfolio</span><span class="ar">الإجابات من محتوى هذا الموقع فقط</span></small></div><button type="button" id="askClose" aria-label="Close">×</button></header>
+  <div class="log" id="log" aria-live="polite"></div>
+  <div class="sugs" id="sugs"></div>
+  <div class="sugs"><button type="button" class="open-contact" style="border-color:var(--teal);font-weight:600"><span class="en">✉ Contact Nawaf directly</span><span class="ar">✉ تواصل مع نواف مباشرة</span></button></div>
+  <form id="askForm" hidden><input id="askIn" autocomplete="off" maxlength="300"><button type="submit"><span class="en">Ask</span><span class="ar">اسأل</span></button></form>
+  <p class="note-ai" id="aiNote" hidden><span class="en">Free-form answers by Claude, using your Claude account.</span><span class="ar">الإجابات الحرة من Claude عبر حسابك فيه.</span></p>
+</div>
+
+<div class="cmodal" id="cmodal" role="dialog" aria-modal="true" aria-labelledby="cTitle" aria-hidden="true">
+  <div class="bg" id="cbg"></div>
+  <form class="cform" id="cform" novalidate>
+    <button class="x" type="button" id="cClose" aria-label="Close">×</button>
+    <p class="eyebrow"><span class="en">Contact</span><span class="ar">تواصل</span></p>
+    <h3 id="cTitle"><span class="en">Send Nawaf a message</span><span class="ar">أرسل رسالة إلى نواف</span></h3>
+    <p><span class="en">Fill this in and it opens as a ready email in your mail app. If that doesn't work on your device, copy it and send it to the address below.</span><span class="ar">عبّئ الحقول فتُفتح الرسالة جاهزة في تطبيق بريدك، وإن لم يعمل ذلك على جهازك فانسخها وأرسلها إلى العنوان أدناه.</span></p>
+    <div class="frow">
+      <div class="fld"><label for="cName"><span class="en">Your name</span><span class="ar">اسمك</span></label><input id="cName" autocomplete="name" required></div>
+      <div class="fld"><label for="cMail"><span class="en">Your email</span><span class="ar">بريدك</span></label><input id="cMail" type="email" autocomplete="email" required></div>
+    </div>
+    <div class="fld"><label for="cSubj"><span class="en">Subject</span><span class="ar">الموضوع</span></label><input id="cSubj" required></div>
+    <div class="fld"><label for="cMsg"><span class="en">Message</span><span class="ar">الرسالة</span></label><textarea id="cMsg" rows="5" required></textarea></div>
+    <div class="fbtns">
+      <button class="btn primary" type="submit"><span class="en">Open in my email app</span><span class="ar">افتح في تطبيق البريد</span> <span class="arr">→</span></button>
+      <button class="btn ghost" type="button" id="cCopy"><span class="en">Copy message</span><span class="ar">انسخ الرسالة</span></button>
+    </div>
+    <div class="sent" id="cSent"></div>
+    <p class="fnote"><span class="en">Goes to</span><span class="ar">يصل إلى</span> <b id="cAddr"></b></p>
+  </form>
+</div>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <button class="x" id="dClose" type="button" aria-label="Close">×</button>
+  <div id="dBody"></div>
+</aside>
+
+<template id="c-musaed">
+  <p class="eyebrow"><span class="en">Case study · In production</span><span class="ar">دراسة حالة · في الإنتاج</span></p>
+  <h3 id="dTitle">MusaedAI <span class="ar">· مساعد Ai</span></h3>
+  <p class="kicker"><span class="en">A bilingual HR assistant that answers policy questions and completes HR requests end to end, inside the Jusur employee app.</span><span class="ar">مساعد موارد بشرية ثنائي اللغة يجيب عن أسئلة السياسات وينفّذ طلبات الموظفين بالكامل داخل تطبيق جسور.</span></p>
+  <dl class="meta"><div><dt><span class="en">Role</span><span class="ar">الدور</span></dt><dd><span class="en">Lead, design to deployment</span><span class="ar">القيادة من التصميم إلى النشر</span></dd></div><div><dt><span class="en">Users</span><span class="ar">المستخدمون</span></dt><dd><span class="en">All employees</span><span class="ar">جميع الموظفين</span></dd></div><div><dt><span class="en">Languages</span><span class="ar">اللغات</span></dt><dd><span class="en">Arabic and English</span><span class="ar">العربية والإنجليزية</span></dd></div></dl>
+  <div class="steps">
+    <div class="step"><i>01</i><div><h4><span class="en">Problem</span><span class="ar">المشكلة</span></h4><p><span class="en">Employees navigated long Arabic policy documents and separate forms for every leave, letter and request.</span><span class="ar">كان الموظف يتنقل بين وثائق سياسات عربية طويلة ونماذج منفصلة لكل إجازة أو خطاب أو طلب.</span></p></div></div>
+    <div class="step"><i>02</i><div><h4><span class="en">Approach</span><span class="ar">النهج</span></h4><p><span class="en">A router sends each message to a specialist agent. Retrieval is hybrid, BGE-M3 dense vectors plus BM25, so Arabic paraphrases and exact policy terms both match.</span><span class="ar">يوجّه موجّهٌ كل رسالة إلى وكيل متخصص، ويجمع الاسترجاع بين التضمينات الكثيفة والبحث النصي (Hybrid Retrieval) لتطابق الصياغة العربية والمصطلحات الدقيقة معاً.</span></p></div></div>
+    <div class="step"><i>03</i><div><h4><span class="en">Architecture</span><span class="ar">البنية</span></h4><p><span class="en">Router, RAG, Leave, Info and Action agents on LangGraph behind FastAPI. Requests open as structured pop-up forms through a typed message protocol.</span><span class="ar">خمسة وكلاء على LangGraph خلف FastAPI، وتظهر الطلبات نماذج منبثقة منظمة عبر بروتوكول رسائل محدد الأنواع.</span></p></div></div>
+    <div class="step"><i>04</i><div><h4><span class="en">Safety</span><span class="ar">الأمان</span></h4><p><span class="en">A security review covered excessive agency, access control at the retrieval boundary and indirect prompt injection through Arabic documents.</span><span class="ar">شملت المراجعة الأمنية الصلاحيات الزائدة للوكيل وضبط الوصول عند حدود الاسترجاع وحقن التعليمات غير المباشر عبر الوثائق العربية.</span></p></div></div>
+  </div>
+  <div class="dk"><div><b>0.94</b><span><span class="en">context precision &amp; recall</span><span class="ar">دقة السياق واستدعاؤه</span></span></div><div><b>0.83</b><span><span class="en">faithfulness, RAGAS</span><span class="ar">الأمانة للمصدر</span></span></div><div><b>23+</b><span><span class="en">HR services live</span><span class="ar">خدمة مفعّلة</span></span></div></div>
+  <div class="stack"><span>LangGraph</span><span>Azure OpenAI</span><span>Azure AI Search</span><span>BGE-M3</span><span>FastAPI</span><span>Docker</span></div>
+</template>
+
+<template id="c-emdad">
+  <p class="eyebrow"><span class="en">Case study · In production</span><span class="ar">دراسة حالة · في الإنتاج</span></p>
+  <h3 id="dTitle">Emdad <span class="ar">· إمداد</span></h3>
+  <p class="kicker"><span class="en">Demand planning and smart replenishment for a national device retail network.</span><span class="ar">تخطيط الطلب والتزويد الذكي لشبكة بيع أجهزة على مستوى المملكة.</span></p>
+  <span class="award"><i>★</i><span class="en">Honoured as a Project Champion 2025 by the Deputy CEO, Technology &amp; Operations</span><span class="ar">كُرّم ضمن أبطال مشاريع 2025 من نائب الرئيس لقطاع التقنية والعمليات</span></span>
+  <dl class="meta"><div><dt><span class="en">Role</span><span class="ar">الدور</span></dt><dd><span class="en">Data science lead</span><span class="ar">قيادة علم البيانات</span></dd></div><div><dt><span class="en">Users</span><span class="ar">المستخدمون</span></dt><dd><span class="en">Planners, warehouse managers</span><span class="ar">المخططون ومديرو المستودعات</span></dd></div><div><dt><span class="en">Scale</span><span class="ar">الحجم</span></dt><dd><span class="en">2 warehouses · ~300 branches</span><span class="ar">مستودعان · نحو ٣٠٠ فرع</span></dd></div></dl>
+  <div class="steps">
+    <div class="step"><i>01</i><div><h4><span class="en">Problem</span><span class="ar">المشكلة</span></h4><p><span class="en">Forecasts existed per product, but stock moves per branch. Two warehouses had to split supply across hundreds of branches with finite shelf space.</span><span class="ar">كانت التوقعات على مستوى المنتج بينما تتحرك البضاعة على مستوى الفرع، ومستودعان يوزعان على مئات الفروع بمساحات رفوف محدودة.</span></p></div></div>
+    <div class="step"><i>02</i><div><h4><span class="en">Approach</span><span class="ar">النهج</span></h4><p><span class="en">Classify products by demand pattern (Syntetos-Boylan) and multi-criteria ABC. Split forecasts by each branch's historical share, then replenish as forecast + safety stock − on hand, capped by shelf capacity.</span><span class="ar">تُصنَّف المنتجات حسب نمط الطلب وتحليل (ABC) متعدد المعايير، وتُوزَّع التوقعات بحصة كل فرع التاريخية، ثم يُحسب التزويد من التوقع ومخزون الأمان ناقص المتوفر في حدود سعة الرفوف.</span></p></div></div>
+    <div class="step"><i>03</i><div><h4><span class="en">Architecture</span><span class="ar">البنية</span></h4><p><span class="en">Medallion layers on SQL Server, daily ML pipelines in Airflow, and a Streamlit app with corporate sign-in.</span><span class="ar">طبقات (Medallion) على قاعدة البيانات، وخطوط تعلم آلي يومية مجدولة، وتطبيق تفاعلي بتسجيل دخول مؤسسي.</span></p></div></div>
+    
+  </div>
+  <div class="flow">EDW → <em>Fast store</em> → Compute · Airflow → <em>Serving · Streamlit / FastAPI / agents</em></div>
+  <div class="dk"><div><b>~300</b><span><span class="en">branches</span><span class="ar">فرع</span></span></div><div><b>~3,000</b><span><span class="en">products</span><span class="ar">منتج</span></span></div><div><b>900K</b><span><span class="en">branch × product series</span><span class="ar">سلسلة فرع × منتج</span></span></div></div>
+  <div class="stack"><span>Python</span><span>SQL Server</span><span>Airflow</span><span>Streamlit</span><span>Docker</span></div>
+</template>
+
+<template id="c-sales">
+  <p class="eyebrow"><span class="en">Case study · Internal pilot</span><span class="ar">دراسة حالة · تجربة داخلية</span></p>
+  <h3 id="dTitle">Sales Insight Agent</h3>
+  <p class="kicker"><span class="en">Ask sales questions in Arabic and get correct SQL and an answer, with a model that runs entirely on-premise.</span><span class="ar">اسأل عن المبيعات بالعربية واحصل على استعلام صحيح وإجابة، بنموذج يعمل بالكامل داخل الشركة.</span></p>
+  <dl class="meta"><div><dt><span class="en">Role</span><span class="ar">الدور</span></dt><dd><span class="en">Designer and sole developer</span><span class="ar">التصميم والتطوير بالكامل</span></dd></div><div><dt><span class="en">Model</span><span class="ar">النموذج</span></dt><dd>Qwen2.5-7B, local</dd></div><div><dt><span class="en">Data</span><span class="ar">البيانات</span></dt><dd><span class="en">All-channel sales</span><span class="ar">مبيعات جميع القنوات</span></dd></div></dl>
+  <div class="steps">
+    <div class="step"><i>01</i><div><h4><span class="en">Approach</span><span class="ar">النهج</span></h4><p><span class="en">A locally hosted model writes SQL guided by schema documentation and few-shot examples retrieved for each question.</span><span class="ar">نموذج مستضاف محلياً يكتب الاستعلامات مسترشداً بتوثيق المخطط وأمثلة تُسترجع لكل سؤال.</span></p></div></div>
+    <div class="step"><i>02</i><div><h4><span class="en">Hard part</span><span class="ar">التحدي</span></h4><p><span class="en">Joins against the item dimension duplicated rows and inflated revenue. Deduplicating with ROW_NUMBER() fixed the totals at the source.</span><span class="ar">كان الربط مع جدول الأصناف يكرر الصفوف ويضخّم الإيرادات، فعالجت ذلك بإزالة التكرار من المصدر.</span></p></div></div>
+  </div>
+  <div class="dk"><div><b>4.48M</b><span><span class="en">rows queried</span><span class="ar">صف</span></span></div><div><b>~47</b><span><span class="en">curated SQL examples</span><span class="ar">مثالاً منتقى</span></span></div><div><b>0</b><span><span class="en">external API calls</span><span class="ar">اتصال خارجي</span></span></div></div>
+  <div class="stack"><span>Qwen2.5</span><span>Ollama</span><span>ChromaDB</span><span>SQL Server</span><span>Streamlit</span></div>
+</template>
+
+<template id="c-kg">
+  <p class="eyebrow"><span class="en">Case study · In development</span><span class="ar">دراسة حالة · قيد التطوير</span></p>
+  <h3 id="dTitle">HR Policy Knowledge Graph</h3>
+  <p class="kicker"><span class="en">Every policy clause linked to the Saudi Labor Law article it implements, so answers can cite both.</span><span class="ar">كل بند في السياسة مرتبط بمادة نظام العمل السعودي التي يستند إليها، لتستشهد الإجابات بالمصدرين.</span></p>
+  <dl class="meta"><div><dt><span class="en">Role</span><span class="ar">الدور</span></dt><dd><span class="en">Knowledge engineer</span><span class="ar">هندسة المعرفة</span></dd></div><div><dt><span class="en">Standards</span><span class="ar">المعايير</span></dt><dd>SKOS · RDF · OWL</dd></div><div><dt><span class="en">Store</span><span class="ar">المخزن</span></dt><dd>Neo4j</dd></div></dl>
+  <div class="steps">
+    <div class="step"><i>01</i><div><h4><span class="en">Problem</span><span class="ar">المشكلة</span></h4><p><span class="en">HR policy lives in long documents that quote the Labor Law loosely. When an employee asks a question, the assistant can find the policy clause or the law article, but not the link between them, so answers cannot show which article a clause implements, which version is current, or what changes when the law changes.</span><span class="ar">تعيش سياسة الموارد البشرية في وثائق طويلة تستشهد بنظام العمل بشكل غير دقيق، وعندما يسأل الموظف يجد المساعد بند السياسة أو مادة النظام لكنه لا يجد الرابط بينهما، فلا تستطيع الإجابة أن تبيّن أي مادة ينفّذها البند، ولا أي إصدار هو الساري، ولا ما الذي يتغير عند تعديل النظام.</span></p></div></div>
+    <div class="step"><i>02</i><div><h4><span class="en">Built so far</span><span class="ar">ما أُنجز</span></h4><p><span class="en">A controlled vocabulary connecting internal policy, the Labor Law and related internal and external documents.</span><span class="ar">مفردات مضبوطة (Controlled Vocabulary) تربط السياسة الداخلية بنظام العمل وبالوثائق الداخلية والخارجية ذات الصلة.</span></p></div></div>
+    <div class="step"><i>03</i><div><h4><span class="en">Next</span><span class="ar">الخطوة التالية</span></h4><p><span class="en">A radial explorer for the policy map, article structure and versions, then graph-grounded answers inside MusaedAI.</span><span class="ar">واجهة استكشاف دائرية للخريطة والمواد والإصدارات، ثم إجابات مستندة إلى الرسم داخل المساعد.</span></p></div></div>
+  </div>
+  <div class="stack"><span>SKOS</span><span>RDF/OWL</span><span>Neo4j</span><span>LLM extraction</span></div>
+</template>
+
+<script>
+(function(){
+  const root=document.documentElement;
+  const NS="http://www.w3.org/2000/svg";
+  const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e};
+  const isAr=()=>root.dataset.lang==="ar";
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const css=n=>getComputedStyle(root).getPropertyValue(n).trim();
+
+  /* ---------- language ---------- */
+  function setLang(l){root.dataset.lang=l;root.lang=l;root.dir=l==="ar"?"rtl":"ltr";try{localStorage.setItem("lang",l)}catch(e){}renderTrace(current);sbc();layoutRank();if(typeof kgRender==="function")kgRender()}
+  document.getElementById("langBtn").addEventListener("click",()=>setLang(isAr()?"en":"ar"));
+
+  /* ---------- top bar ---------- */
+  const bar=document.getElementById("bar");
+  const prog=document.getElementById("prog");
+  addEventListener("scroll",()=>{bar.classList.toggle("scrolled",scrollY>8);const m=document.documentElement.scrollHeight-innerHeight;prog.style.transform=`scaleX(${m>0?scrollY/m:0})`},{passive:true});
+
+  /* ---------- tile spotlight ---------- */
+  document.querySelectorAll(".tile").forEach(t=>t.addEventListener("pointermove",e=>{const r=t.getBoundingClientRect();t.style.setProperty("--mx",(e.clientX-r.left)+"px");t.style.setProperty("--my",(e.clientY-r.top)+"px")}));
+
+  /* ---------- hero 3D knowledge graph ---------- */
+  const cv=document.getElementById("hg"),cx=cv.getContext("2d");
+  const HUBS={MusaedAI:{k:"In production",d:["Bilingual HR assistant","مساعد موارد بشرية ثنائي اللغة"],c:"musaed"},Emdad:{k:"In production",d:["Demand planning, ~300 branches","تخطيط الطلب لنحو ٣٠٠ فرع"],c:"emdad"},"Sales Agent":{k:"Internal pilot",d:["Arabic text-to-SQL on 4.48M rows","تحويل الأسئلة العربية إلى استعلامات"],c:"sales"},"HR Policy KG":{k:"In development",d:["Policy ↔ Labor Law graph","رسم يربط السياسة بنظام العمل"],c:"kg"}};
+  const E={MusaedAI:["LangGraph","Hybrid RAG","Azure OpenAI","Arabic NLP","FastAPI"],Emdad:["Forecasting","Airflow","SQL Server","Streamlit","LangGraph"],"Sales Agent":["Text-to-SQL","Qwen2.5","SQL Server","Streamlit","Arabic NLP"],"HR Policy KG":["SKOS","Neo4j","Arabic NLP","Hybrid RAG","OWL"]};
+  const hubs=Object.keys(E),skills=[...new Set(Object.values(E).flat())];const P={};
+  const TET=[[1,1,1],[1,-1,-1],[-1,1,-1],[-1,-1,1]];hubs.forEach((h,i)=>{const v=TET[i];P[h]=[v[0]*.46,v[1]*.42,v[2]*.46,1]});
+  const nrm=v=>{const l=Math.hypot(...v)||1;return v.map(x=>x/l)};
+  skills.forEach((k,i)=>{const own=hubs.filter(h=>E[h].includes(k));let v=[0,0,0];own.forEach(h=>{v[0]+=P[h][0];v[1]+=P[h][1];v[2]+=P[h][2]});v=nrm(v);
+    const y=1-(i+.5)/skills.length*2,r=Math.sqrt(1-y*y),th=i*2.39996;v=nrm([v[0]+Math.cos(th)*r*.55,v[1]+y*.55,v[2]+Math.sin(th)*r*.55]);P[k]=[v[0]*1.02,v[1]*.9,v[2]*1.02,0]});
+  let W=0,H=0,ang=.6,tilt=-.52,drag=null,active=0,hoverHub=null,born=performance.now(),last=performance.now(),vel=0;
+  function size(){const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0)}
+  const ease=x=>1-Math.pow(1-x,3);
+  function proj(v,k){let[x,y,z]=v;x*=k;y*=k;z*=k;const ca=Math.cos(ang),sa=Math.sin(ang),cb=Math.cos(tilt),sb=Math.sin(tilt);
+    const x1=x*ca+z*sa,z1=-x*sa+z*ca,y2=y*cb-z1*sb,z2=y*sb+z1*cb,F=3.2,s=F/(F+z2),R=Math.min(W,H)*.36;return[W/2+x1*R*s,H/2+y2*R*s,z2,s]}
+  function draw(t){
+    const k=reduce?1:ease(Math.min(1,(t-born)/1600));const teal=css("--teal"),mint=css("--mint"),fg=css("--fg"),muted=css("--muted");
+    cx.clearRect(0,0,W,H);const cur=hoverHub||hubs[active],lit=new Set([cur,...E[cur]]);
+    // orbit rings
+    for(const [ry,rr] of [[0,1],[.55,.84],[-.55,.84]]){cx.beginPath();for(let i=0;i<=64;i++){const a=i/64*Math.PI*2;const p=proj([Math.cos(a)*rr,ry,Math.sin(a)*rr],k);i?cx.lineTo(p[0],p[1]):cx.moveTo(p[0],p[1])}cx.strokeStyle="rgba(12,140,120,.10)";cx.lineWidth=1;cx.stroke()}
+    const pp={};for(const n in P)pp[n]=proj(P[n],k);
+    for(const h of hubs)for(const sk of E[h]){const a=pp[h],b=pp[sk],on=h===cur;const depth=(a[2]+b[2])/2;
+      cx.beginPath();cx.moveTo(a[0],a[1]);cx.quadraticCurveTo((a[0]+b[0])/2,(a[1]+b[1])/2-14,b[0],b[1]);
+      cx.strokeStyle=on?mint:`rgba(140,170,162,${.38-depth*.12})`;cx.lineWidth=on?2.6:1;cx.setLineDash(on?[7,6]:[]);cx.lineDashOffset=on?-(t/35)%13:0;cx.stroke()}
+    cx.setLineDash([]);
+    const order=Object.keys(P).sort((a,b)=>pp[b][2]-pp[a][2]);const fs=Math.max(10.5,Math.min(13,W/40));
+    for(const n of order){const[x,y,z,s]=pp[n];const hub=P[n][3],on=lit.has(n),front=Math.max(.25,Math.min(1,.75-z*.5));
+      cx.globalAlpha=on?1:front;
+      if(hub&&n===cur){const g=cx.createRadialGradient(x,y,0,x,y,38*s);g.addColorStop(0,"rgba(45,212,174,.45)");g.addColorStop(1,"rgba(45,212,174,0)");cx.fillStyle=g;cx.beginPath();cx.arc(x,y,38*s,0,7);cx.fill()}
+      const r=(hub?12:5.5)*s*(on&&!hub?1.25:1);
+      cx.beginPath();cx.arc(x,y,r,0,7);
+      if(hub){const g=cx.createLinearGradient(x-r,y-r,x+r,y+r);g.addColorStop(0,n===cur?mint:"#fff");g.addColorStop(1,n===cur?teal:"#E9F7F2");cx.fillStyle=g}else cx.fillStyle=on?css("--mint-soft"):"#fff";
+      cx.fill();cx.lineWidth=hub?2.4:1.4;cx.strokeStyle=hub||on?teal:"#BCD0CA";cx.stroke();
+      cx.globalAlpha=1}
+    const boxes=[];cx.textAlign="center";
+    const pri=n=>(P[n][3]?0:lit.has(n)?1:2);for(const n of [...order].reverse().sort((a,b)=>pri(a)-pri(b))){const[x,y,z,s]=pp[n];const hub=P[n][3],on=lit.has(n);if(!(hub||on||z<-.55))continue;
+      cx.font=`${hub?800:500} ${(hub?fs+1.5:fs-.5)*Math.min(1.1,s)}px ${hub?"Manrope":"JetBrains Mono"}, system-ui, sans-serif`;
+      const tw=cx.measureText(n).width,tx=Math.min(Math.max(x,tw/2+2),W-tw/2-2),ty=y+(hub?-19*s:17*s),bx=[tx-tw/2-3,ty-12,tx+tw/2+3,ty+4];
+      if(boxes.some(o=>bx[0]<o[2]&&bx[2]>o[0]&&bx[1]<o[3]&&bx[3]>o[1]))continue;boxes.push(bx);
+      cx.globalAlpha=on||hub?1:Math.max(.35,.75-z*.5);cx.fillStyle=on||hub?fg:muted;cx.fillText(n,tx,ty);cx.globalAlpha=1}
+    return pp}
+  let lastPP={};
+  function loop(t){const dt=Math.min(50,t-last);last=t;if(!drag){ang+=dt*.00012+vel;vel*=.94}lastPP=draw(t);requestAnimationFrame(loop)}
+  size();addEventListener("resize",()=>{size();if(reduce)lastPP=draw(0)});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{if(reduce)lastPP=draw(0)});
+  reduce?(lastPP=draw(0)):requestAnimationFrame(loop);
+  const setName=()=>{};
+  const tip=document.getElementById("tip");
+  function showTip(h){if(!h){tip.classList.remove("show");return}const p=lastPP[h];if(!p)return;const d=HUBS[h];
+    document.getElementById("tipK").textContent=isAr()?{"In production":"في الإنتاج","Internal pilot":"تجربة داخلية","In development":"قيد التطوير"}[d.k]:d.k;
+    document.getElementById("tipT").textContent=h;document.getElementById("tipD").textContent=d.d[isAr()?1:0];
+    const r=cv.getBoundingClientRect(),sr=cv.parentElement.getBoundingClientRect();let x=p[0]+(r.left-sr.left)+18,y=p[1]+(r.top-sr.top)-20;x=Math.min(x,sr.width-240);tip.style.left=Math.max(0,x)+"px";tip.style.top=y+"px";tip.classList.add("show")}
+  setInterval(()=>{if(!hoverHub&&!drag){active=(active+1)%hubs.length;setName(hubs[active]);if(reduce)lastPP=draw(0)}},3200);
+  cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY,a:ang,b:tilt,moved:false};cv.setPointerCapture(e.pointerId)});
+  cv.addEventListener("pointermove",e=>{const r=cv.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top;
+    if(drag){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>4)drag.moved=true;vel=(drag.a+dx*.008-ang)*.15;ang=drag.a+dx*.008;tilt=Math.max(-.9,Math.min(.6,drag.b+dy*.006));if(reduce)lastPP=draw(0);return}
+    let best=null,bd=46;for(const h of hubs){const p=lastPP[h];if(!p)continue;const d=Math.hypot(p[0]-mx,p[1]-my);if(d<bd){bd=d;best=h}}
+    if(best!==hoverHub){hoverHub=best;if(best)setName(best);if(reduce)lastPP=draw(0)}showTip(hoverHub);cv.style.cursor=best?"pointer":"grab"});
+  cv.addEventListener("pointerup",()=>{const was=drag;drag=null;if(was&&!was.moved&&hoverHub)openCase(HUBS[hoverHub].c,null)});
+  cv.addEventListener("pointerleave",()=>{hoverHub=null;showTip(null)});
+
+  /* ---------- counters ---------- */
+  function countUp(b){const to=parseFloat(b.dataset.count),dec=+(b.dataset.dec||0),suf=b.dataset.suf||"",plus=b.querySelector("small");const tail=plus?plus.outerHTML:"";
+    const s=performance.now();(function f(n){const p=Math.min(1,(n-s)/1400),v=to*(1-Math.pow(1-p,3));b.innerHTML=v.toFixed(dec)+tail;if(p<1)requestAnimationFrame(f)})(s)}
+
+  /* ---------- reveal + spy ---------- */
+  const links=[...document.querySelectorAll("nav a, .dock a")];
+  if("IntersectionObserver" in window){
+    const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+    document.querySelectorAll("section[id]").forEach(s=>spy.observe(s));
+    if(!reduce){
+      const items=[...document.querySelectorAll(".sec-head,.tile,.also,.panel:not([hidden]),.tabs,.note,.pst,.rc,.xi,.edu,.two > div,.contact")];
+      const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove("pre");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8% 0px"});
+      items.forEach((n,i)=>{if(n.getBoundingClientRect().top>innerHeight){n.classList.add("rv","pre");n.style.transitionDelay=(n.classList.contains("tile")||n.classList.contains("note")||n.classList.contains("pst")?(i%4)*80:0)+"ms";io.observe(n)}});
+      setTimeout(()=>items.forEach(n=>n.classList.remove("pre")),6000);
+      const st=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll("[data-count]").forEach(countUp);st.disconnect()}}),{threshold:.5});
+      st.observe(document.querySelector(".stats"));
+    }
+  }
+
+  /* ---------- product mock-ups (illustrative) ---------- */
+  const MOCK={
+  musaed:`<div class="mock"><div class="chrome"><i></i><i></i><i></i><span>Jusur · مساعد Ai</span><em>AR · EN</em></div><div class="pad">
+    <div class="mb u ar-t">أبغى إجازة سنوية من ١٢ إلى ١٦ نوفمبر</div>
+    <div class="mb b ar-t">تمام، جهّزت لك الطلب حسب سياسة الإجازات. راجِع التفاصيل وأرسله.</div>
+    <div class="lcard"><h5>طلب إجازة سنوية</h5><div class="row"><span>من</span><b>١٢ نوفمبر</b></div><div class="row"><span>إلى</span><b>١٦ نوفمبر</b></div><div class="row"><span>الرصيد</span><b>كافٍ ✓</b></div><div class="go">إرسال الطلب</div></div>
+    <div class="cite"><span>Leave Agent</span><span>Leave policy</span><span>Labor Law · Art. 109</span></div></div></div>`,
+  emdad:`<div class="mock"><div class="chrome"><i></i><i></i><i></i><span>Emdad · Replenishment</span><em>daily · Airflow</em></div><div class="pad">
+    <div class="kchips"><div><b>~300</b><span>branches</span></div><div><b>~3,000</b><span>products</span></div><div><b>Intermittent</b><span>demand pattern</span></div></div>
+    <svg viewBox="0 0 300 92" aria-hidden="true"><path d="M0 70 C30 62 50 40 80 46 S130 22 160 30 S220 12 250 20 S290 14 300 12 L300 40 C270 44 240 38 210 50 S150 58 120 64 S50 82 0 84Z" fill="#E5F8F2"/>
+      ${[58,44,62,38,50,30,46,26,40,22].map((h,i)=>`<rect x="${8+i*24}" y="${92-h}" width="12" height="${h}" rx="3" fill="#CDEFE4"/>`).join("")}
+      <path d="M0 78 C30 70 50 52 80 56 S130 34 160 42 S220 26 250 32 S290 28 300 26" fill="none" stroke="#0C8C78" stroke-width="2.2"/><circle cx="300" cy="26" r="3.5" fill="#0C8C78"/></svg>
+    <table class="mt"><tr><th>Branch</th><th>Forecast</th><th>On hand</th><th>Order</th></tr><tr><td>RUH-014</td><td>42</td><td>11</td><td class="up">+37</td></tr><tr><td>JED-207</td><td>18</td><td>20</td><td>0</td></tr></table></div></div>`,
+  sales:`<div class="mock"><div class="chrome"><i></i><i></i><i></i><span>Sales Insight Agent</span><em>on-prem · Qwen2.5</em></div><div class="pad">
+    <div class="mb u ar-t">كم مبيعات الأجهزة لكل قناة الشهر الماضي؟</div>
+    <div class="code"><span class="k">SELECT</span> channel, <span class="k">SUM</span>(net_amount)
+<span class="k">FROM</span> sales_dedup
+<span class="k">WHERE</span> category = <span class="s">'Devices'</span>
+  <span class="k">AND</span> month = <span class="s">'2026-09'</span>
+<span class="k">GROUP BY</span> channel;</div>
+    <svg viewBox="0 0 300 70" aria-hidden="true">${[["Online",.92],["Branches",.74],["B2B",.46],["Partners",.3]].map(([n,v],i)=>`<text x="0" y="${12+i*17}" font-size="10" font-family="JetBrains Mono, monospace" fill="#5B6E69">${n}</text><rect x="70" y="${4+i*17}" width="${v*220}" height="10" rx="5" fill="${i?"#9EE6D2":"#0C8C78"}"/>`).join("")}</svg></div></div>`,
+  kg:`<div class="mock"><div class="chrome"><i></i><i></i><i></i><span>Policy Explorer</span><em>SKOS · Neo4j</em></div><div class="pad"><div class="kg-wrap">
+    <svg viewBox="0 0 220 170" aria-hidden="true"><g transform="translate(110 85)"><circle r="68" fill="none" stroke="#0C8C78" stroke-opacity=".12"/><circle r="40" fill="none" stroke="#0C8C78" stroke-opacity=".18"/>
+      ${[[0,-68,"Labor Law"],[59,-34,"Art. 109"],[59,34,"Carry-over"],[0,68,"Eligibility"],[-59,34,"v2025"],[-59,-34,"Encashment"]].map(([x,y,t],i)=>`<path d="M0 0 L${x} ${y}" stroke="${i<2?"#2DD4AE":"#C9DCD6"}" stroke-width="${i<2?2:1.2}"/><circle cx="${x}" cy="${y}" r="${i<2?7:5.5}" fill="#fff" stroke="#0C8C78" stroke-width="1.6"/><text x="${x}" y="${y+(y<0?-11:17)}" text-anchor="middle" font-size="9" font-family="JetBrains Mono, monospace" fill="#0D1F1B">${t}</text>`).join("")}
+      <circle r="15" fill="#0C8C78"/><text y="4" text-anchor="middle" font-size="9" fill="#fff" font-family="Manrope, sans-serif" font-weight="700">Leave</text></g></svg>
+    <div class="kg-side"><b>Annual leave policy</b><div class="lk">implements Labor Law Art. 109</div><div class="lk">3 internal documents</div><div class="lk">2 versions tracked</div></div></div></div></div>`};
+  document.querySelectorAll(".art[data-mock]").forEach(a=>a.innerHTML=MOCK[a.dataset.mock]);
+
+  /* ---------- architecture diagrams ---------- */
+  const AH='<defs><marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#B7CFC8"/></marker></defs>';
+  const bx=(x,y,w,h,t,c="",sub="")=>`<rect class="ab ${c}" x="${x}" y="${y}" width="${w}" height="${h}" rx="10"/><text class="at ${c==="dk"?"w":""}" x="${x+w/2}" y="${y+(sub?h/2-2:h/2+4)}" text-anchor="middle">${t}</text>${sub?`<text class="at m" x="${x+w/2}" y="${y+h/2+11}" text-anchor="middle">${sub}</text>`:""}`;
+  const ln=(d,hi)=>`<path class="ae ${hi?"hi":""}" d="${d}"/>`;
+  const ARCH={
+  musaed:`<svg viewBox="0 0 680 250">${AH}<rect class="lane" x="0" y="0" width="680" height="250" rx="14"/>
+    ${bx(20,100,100,46,"Jusur app","","token auth")}${ln("M120 123 L160 123",1)}
+    ${bx(160,100,110,46,"FastAPI","","typed protocol")}${ln("M270 123 L310 123",1)}
+    ${bx(310,100,90,46,"Router","hi")}
+    ${ln("M400 112 C430 112 430 36 460 36",1)}${ln("M400 118 C430 118 430 92 460 92",1)}${ln("M400 128 C430 128 430 148 460 148",1)}${ln("M400 134 C430 134 430 204 460 204",1)}
+    ${bx(460,16,100,40,"RAG Agent")}${bx(460,72,100,40,"Leave Agent")}${bx(460,128,100,40,"Info Agent")}${bx(460,184,100,40,"Action Agent")}
+    ${ln("M560 36 L590 36")}${ln("M560 92 L590 92")}${ln("M560 148 L590 148")}${ln("M560 204 L590 204")}
+    <text class="at m" x="615" y="40" text-anchor="middle">AI Search</text><text class="at m" x="615" y="96" text-anchor="middle">Leave API</text><text class="at m" x="615" y="152" text-anchor="middle">HR profile</text><text class="at m" x="615" y="208" text-anchor="middle">Forms</text>
+    ${bx(160,180,240,46,"Azure AI Search · hybrid","","BGE-M3 dense + BM25")}${ln("M460 36 C440 36 300 60 290 180")}
+    <text class="lanet" x="20" y="24">LANGGRAPH · AZURE OPENAI · DOCKER</text></svg>`,
+  emdad:`<svg viewBox="0 0 640 230">${AH}
+    <rect class="lane" x="0" y="0" width="150" height="230" rx="14"/><rect class="lane" x="163" y="0" width="150" height="230" rx="14"/><rect class="lane" x="326" y="0" width="150" height="230" rx="14"/><rect class="lane" x="489" y="0" width="151" height="230" rx="14"/>
+    <text class="lanet" x="75" y="22" text-anchor="middle">SOURCE</text><text class="lanet" x="238" y="22" text-anchor="middle">FAST STORE</text><text class="lanet" x="401" y="22" text-anchor="middle">COMPUTE</text><text class="lanet" x="564" y="22" text-anchor="middle">SERVING</text>
+    ${bx(20,60,110,44,"EDW","","consumption, items")}${bx(20,120,110,44,"Manual input","","shelf dimensions")}
+    ${ln("M130 82 L183 82",1)}${ln("M130 142 L183 142")}
+    ${bx(183,60,110,44,"Bronze","","raw extract")}${bx(183,120,110,44,"Silver · Gold","","dedup, ratios")}${ln("M238 104 L238 120",1)}
+    ${ln("M293 142 L346 142",1)}
+    ${bx(346,44,110,40,"Classify","","SBC · ABC")}${bx(346,100,110,40,"Forecast","","monthly, per item")}${bx(346,156,110,40,"Replenish","","per branch, capped")}
+    ${ln("M401 84 L401 100",1)}${ln("M401 140 L401 156",1)}
+    ${ln("M456 176 L509 176",1)}${ln("M456 120 L509 90")}
+    ${bx(509,70,110,40,"Streamlit","","planners, AD login")}${bx(509,156,110,40,"Agents · API","","next")}
+    <text class="at m" x="401" y="218" text-anchor="middle">Airflow · daily · Docker</text></svg>`,
+  sales:`<svg viewBox="0 0 640 210">${AH}<rect class="lane" x="0" y="0" width="640" height="210" rx="14"/><text class="lanet" x="20" y="24">ON-PREMISE · NO EXTERNAL CALLS</text>
+    ${bx(20,80,100,46,"Question","","Arabic, Streamlit")}${ln("M120 103 L160 103",1)}
+    ${bx(160,80,120,46,"Few-shot retrieval","","ChromaDB · ~47")}${ln("M280 103 L320 103",1)}
+    ${bx(320,80,110,46,"Qwen2.5-7B","hi","Ollama")}${ln("M430 103 L470 103",1)}
+    ${bx(470,80,150,46,"SQL Server","","dedup views · ROW_NUMBER")}
+    ${ln("M545 126 C545 170 420 170 375 170 C340 170 320 150 320 126",1)}<text class="at m" x="450" y="186" text-anchor="middle">result → answer + chart</text>
+    ${bx(160,150,120,40,"Schema docs","")}${ln("M220 150 C220 135 300 135 340 126")}</svg>`,
+  kg:`<svg viewBox="0 0 640 230">${AH}<rect class="lane" x="0" y="0" width="640" height="230" rx="14"/><text class="lanet" x="20" y="24">POLICY ↔ LABOR LAW</text>
+    ${bx(20,50,120,44,"HR policy docs","","internal")}${bx(20,110,120,44,"Labor Law","","articles")}${bx(20,170,120,44,"Related docs","","internal + external")}
+    ${ln("M140 72 L190 100",1)}${ln("M140 132 L190 118",1)}${ln("M140 192 L190 136")}
+    ${bx(190,86,130,60,"LLM extraction","hi","clauses, articles, links")}${ln("M320 116 L360 116",1)}
+    ${bx(360,86,130,60,"Controlled vocab","","SKOS · OWL")}${ln("M490 116 L530 116",1)}
+    ${bx(530,66,90,44,"Neo4j")}${bx(530,140,90,44,"Explorer","","radial UI")}${ln("M575 110 L575 140")}
+    ${ln("M425 146 C425 200 300 200 255 200 C230 200 230 180 255 170")}<text class="at m" x="330" y="216" text-anchor="middle">graph-grounded answers → MusaedAI</text></svg>`};
+
+  /* ---------- case drawer ---------- */
+  const drawer=document.getElementById("drawer"),scrim=document.getElementById("scrim"),body=document.getElementById("dBody");let lastFocus=null;
+  const CASES=["musaed","emdad","sales","kg"],CN={musaed:"MusaedAI",emdad:"Emdad",sales:"Sales Insight Agent",kg:"HR Policy KG"};
+  function openCase(id,btn){body.innerHTML="";body.appendChild(document.getElementById("c-"+id).content.cloneNode(true));drawer.scrollTop=0;
+    const mb=document.createElement("div");mb.className="mockbox";mb.innerHTML=MOCK[id]+`<p class="illus">${isAr()?"واجهة توضيحية ببيانات تجريبية":"Illustrative interface with sample data"}</p>`;body.querySelector(".kicker").after(mb);const ab=document.createElement("div");ab.className="archbox";ab.innerHTML=`<span class="eyebrow">${isAr()?"البنية المعمارية":"Architecture"}</span>`+ARCH[id];const st=body.querySelector(".steps");st.after(ab);
+    const i=CASES.indexOf(id),prev=CASES[(i+3)%4],next=CASES[(i+1)%4];const nav=document.createElement("div");nav.className="dnav";
+    nav.innerHTML=`<button type="button" data-go="${prev}">${isAr()?"→":"←"} ${CN[prev]}</button><button type="button" data-go="${next}">${CN[next]} ${isAr()?"←":"→"}</button>`;
+    nav.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>openCase(b.dataset.go,lastFocus)));body.appendChild(nav);const kh=document.createElement("span");kh.className="khint";kh.textContent=isAr()?"← → للتنقل بين المشاريع · Esc للإغلاق":"← → switch project · Esc close";body.appendChild(kh);
+    if(btn)lastFocus=btn;drawer.classList.add("show");scrim.classList.add("show");drawer.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";document.getElementById("dClose").focus()}
+  function closeCase(){drawer.classList.remove("show");scrim.classList.remove("show");drawer.setAttribute("aria-hidden","true");document.body.style.overflow="";if(lastFocus)lastFocus.focus()}
+  document.querySelectorAll(".tile").forEach(b=>b.addEventListener("click",()=>openCase(b.dataset.case,b)));
+  document.getElementById("dClose").addEventListener("click",closeCase);scrim.addEventListener("click",closeCase);
+  addEventListener("keydown",e=>{if(e.key==="Escape"&&drawer.classList.contains("show"))closeCase()});
+
+  /* ---------- demo tabs ---------- */
+  const tabs=[...document.querySelectorAll('[role="tab"]')];
+  tabs.forEach(tb=>tb.addEventListener("click",()=>{tabs.forEach(x=>{const on=x===tb;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on});
+    if(tb.id==="tab-ret")layoutRank();if(tb.id==="tab-sbc")sbc();if(tb.id==="tab-kg")kgRender()}));
+
+  /* ---------- Syntetos-Boylan ---------- */
+  let seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return(seed-1)/2147483646};
+  const gauss=()=>{let u=0,v=0;while(!u)u=rnd();while(!v)v=rnd();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)};
+  const pS=document.getElementById("pSale"),vS=document.getElementById("vSize");
+  const TXT={Smooth:["Smooth","سلس","Regular and stable. Exponential smoothing and other classic models work well.","منتظم ومستقر، وتناسبه النماذج التقليدية كالتمهيد الأسي."],
+    Erratic:["Erratic","متذبذب","Sells most weeks, but quantities swing. Hold more safety stock.","يُباع في أغلب الأسابيع لكن الكميات متقلبة، فيحتاج مخزون أمان أعلى."],
+    Intermittent:["Intermittent","متقطع","Many zero weeks with steady sizes. Croston or SBA beats a plain average.","أسابيع كثيرة بلا بيع بأحجام ثابتة، وتناسبه طريقة كروستون (Croston) أكثر من المتوسط."],
+    Lumpy:["Lumpy","متكتل","Rare and unpredictable. Plan by service level, not point forecasts.","نادر وغير متوقع، فيُخطَّط له بمستوى الخدمة لا بالتوقع النقطي."]};
+  function sbc(){
+    seed=7;const p=pS.value/100,v=vS.value/100;document.getElementById("pOut").textContent=pS.value+"%";document.getElementById("vOut").textContent=v.toFixed(2);
+    const s=[];for(let i=0;i<52;i++)s.push(rnd()<p?Math.max(1,Math.round(20*Math.exp(v*gauss()-v*v/2))):0);
+    const nz=s.filter(x=>x>0),adi=nz.length?52/nz.length:52,m=nz.reduce((a,b)=>a+b,0)/(nz.length||1);
+    const cv2=nz.length>1?(nz.reduce((a,b)=>a+(b-m)**2,0)/(nz.length-1))/(m*m):0;
+    const c=adi<1.32?(cv2<0.49?"Smooth":"Erratic"):(cv2<0.49?"Intermittent":"Lumpy");
+    const S=document.getElementById("series");S.innerHTML="";const mx=Math.max(...s,1);
+    el("line",{x1:0,y1:120,x2:260,y2:120,stroke:"var(--line)"},S);
+    s.forEach((x,i)=>{const h=x/mx*108;el("rect",x?{x:i*5,y:120-h,width:3.6,height:h,fill:"var(--teal)",rx:1.5}:{x:i*5,y:118,width:3.6,height:2,fill:"var(--line)"},S)});
+    el("text",{x:0,y:129.5,"font-size":"8","font-family":"JetBrains Mono, monospace",fill:"var(--muted)"},S).textContent=isAr()?"٥٢ أسبوعاً":"52 weeks";
+    const Q=document.getElementById("quad");Q.innerHTML="";
+    const X=a=>20+Math.min((a-1)/(2.64-1),1)*130,Y=c2=>110-Math.min(c2/.98,1)*100;
+    const quads=[["Smooth",20,Y(.49),X(1.32)-20,110-Y(.49)],["Erratic",20,10,X(1.32)-20,Y(.49)-10],["Intermittent",X(1.32),Y(.49),150-X(1.32),110-Y(.49)],["Lumpy",X(1.32),10,150-X(1.32),Y(.49)-10]];
+    quads.forEach(([k,x,y,w,h])=>el("rect",{x,y,width:w,height:h,fill:k===c?"var(--mint-soft)":"var(--surface)"},Q));
+    el("line",{x1:X(1.32),y1:10,x2:X(1.32),y2:110,stroke:"#fff","stroke-width":2},Q);el("line",{x1:20,y1:Y(.49),x2:150,y2:Y(.49),stroke:"#fff","stroke-width":2},Q);
+    (isAr()?[["سلس",28,104],["متذبذب",28,20],["متقطع",98,104],["متكتل",98,20]]:[["Smooth",26,104],["Erratic",26,20],["Intermit.",92,104],["Lumpy",98,20]])
+      .forEach(([t,x,y])=>el("text",{x,y,"font-size":"8.5","font-family":"JetBrains Mono, monospace",fill:"var(--muted)"},Q).textContent=t);
+    el("text",{x:150,y:124,"font-size":"8","text-anchor":"end","font-family":"JetBrains Mono, monospace",fill:"var(--muted)"},Q).textContent="ADI →";
+    el("text",{x:2,y:16,"font-size":"8","font-family":"JetBrains Mono, monospace",fill:"var(--muted)"},Q).textContent="CV²";
+    el("circle",{cx:X(adi),cy:Y(cv2),r:6,fill:"var(--teal)",stroke:"#fff","stroke-width":2.5},Q);
+    const t=TXT[c];document.getElementById("cls").textContent=isAr()?t[1]:t[0];
+    document.getElementById("stats").textContent=`ADI ${adi.toFixed(2)} · CV² ${cv2.toFixed(2)}`;
+    document.getElementById("advice").textContent=isAr()?t[3]:t[2];
+  }
+  pS.addEventListener("input",sbc);vS.addEventListener("input",sbc);
+
+  /* ---------- agent trace ---------- */
+  const QS=[
+    {en:"How many annual leave days do I get after five years?",ar:"كم يوم إجازة سنوية أستحق بعد خمس سنوات؟",a:"rag",oe:"A cited answer from the leave policy, with the matching Labor Law article.",oa:"إجابة موثقة من سياسة الإجازات مع مادة نظام العمل المقابلة."},
+    {en:"Book annual leave from 12 to 16 November.",ar:"أبغى إجازة سنوية من ١٢ إلى ١٦ نوفمبر.",a:"leave",oe:"A pre-filled leave request card with a balance check, ready to submit.",oa:"بطاقة طلب إجازة معبأة مسبقاً بعد التحقق من الرصيد، جاهزة للإرسال."},
+    {en:"What is my remaining leave balance?",ar:"كم باقي من رصيد إجازاتي؟",a:"info",oe:"The employee's live balance, read with their own access token.",oa:"الرصيد الفعلي للموظف بصلاحياته هو فقط."},
+    {en:"I need a letter of introduction for the bank.",ar:"أحتاج خطاب تعريف للبنك.",a:"action",oe:"A pop-up form for the letter request, sent to the HR workflow.",oa:"نموذج منبثق لطلب الخطاب يُرسل إلى مسار الموارد البشرية."}];
+  const AG={rag:"RAG Agent",leave:"Leave Agent",info:"Info Agent",action:"Action Agent"},TOOL={rag:"Azure AI Search",leave:"Leave API",info:"HR profile",action:"Request form"};
+  let current=0;const F=document.getElementById("flow"),ql=document.getElementById("qList");
+  QS.forEach((q,i)=>{const b=document.createElement("button");b.type="button";b.className="q";b.innerHTML=`<span class="en">${q.en}</span><span class="ar">${q.ar}</span>`;b.addEventListener("click",()=>renderTrace(i));ql.appendChild(b)});
+  function box(x,y,w,label,on){const g=el("g",{class:"t-node"+(on?" on":"")},F);el("rect",{x:x-w/2,y,width:w,height:32,rx:16},g);el("text",{x,y:y+20.5,"text-anchor":"middle"},g).textContent=label}
+  function renderTrace(i){current=i;[...ql.children].forEach((b,j)=>b.setAttribute("aria-pressed",j===i));
+    const q=QS[i],ks=Object.keys(AG),xs=[55,160,265,365];F.innerHTML="";const ax=xs[ks.indexOf(q.a)];
+    ks.forEach((k,j)=>el("path",{class:"t-edge"+(k===q.a?" on":""),d:`M210,46 C210,72 ${xs[j]},62 ${xs[j]},88`},F));
+    el("path",{class:"t-edge on",d:`M${ax},120 L${ax},150`},F);
+    box(210,14,110,"Router",true);ks.forEach((k,j)=>box(xs[j],88,98,AG[k],k===q.a));box(ax,150,110,TOOL[q.a],true);
+    document.getElementById("tOut").textContent=isAr()?q.oa:q.oe}
+
+  /* ---------- hybrid retrieval ---------- */
+  const DOCS=[
+    {id:"d1",rel:1,bm:.95,de:.66,en:"Article 151: a female worker is entitled to maternity leave of 12 weeks.",ar:"المادة ١٥١: تستحق العاملة إجازة وضع مدتها اثنا عشر أسبوعاً."},
+    {id:"d2",rel:1,bm:.22,de:.86,en:"Employees who give birth may take paid time off to recover and care for the newborn.",ar:"يحق للموظفة بعد الولادة إجازة مدفوعة للتعافي ورعاية المولود."},
+    {id:"d3",rel:0,bm:.55,de:.52,en:"Article 109: annual leave is 21 days, rising to 30 after five years.",ar:"المادة ١٠٩: الإجازة السنوية ٢١ يوماً وتصبح ٣٠ بعد خمس سنوات."},
+    {id:"d4",rel:0,bm:.40,de:.41,en:"Sick leave: up to 30 days at full pay in a year.",ar:"الإجازة المرضية: حتى ٣٠ يوماً بأجر كامل في السنة."},
+    {id:"d5",rel:0,bm:.18,de:.80,en:"New fathers receive three days of paternity leave.",ar:"يحصل الأب على إجازة أبوة مدتها ثلاثة أيام عند ولادة طفله."}];
+  const rankBy=k=>[...DOCS].sort((a,b)=>b[k]-a[k]).map(d=>d.id),rB=rankBy("bm"),rD=rankBy("de");
+  DOCS.forEach(d=>d.hyb=1/(61+rB.indexOf(d.id))+1/(61+rD.indexOf(d.id)));
+  const RK=document.getElementById("rank");let mode="hyb";
+  DOCS.forEach(d=>{const li=document.createElement("li");li.dataset.id=d.id;
+    li.innerHTML=`<span class="pos"></span><span><span class="en">${d.en}</span><span class="ar">${d.ar}</span>${d.rel?'<span class="tag"><span class="en">relevant</span><span class="ar">ذو صلة</span></span>':''}</span><span class="bars"><span><i style="width:${d.bm*100}%"></i></span><span><i style="width:${d.de*100}%"></i></span></span>`;RK.appendChild(li)});
+  function layoutRank(){if(!RK.offsetParent)return;const order=[...DOCS].sort((a,b)=>b[mode]-a[mode]),lis={};[...RK.children].forEach(li=>lis[li.dataset.id]=li);let y=0;
+    order.forEach((d,i)=>{const li=lis[d.id];li.style.transform=`translateY(${y}px)`;li.querySelector(".pos").textContent=i+1;li.classList.toggle("top",i<2);y+=li.offsetHeight+10});
+    RK.style.height=y+"px";document.getElementById("rk").textContent=order.slice(0,2).filter(d=>d.rel).length+"/2"}
+  document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>{mode=b.dataset.m;document.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed",x===b));layoutRank()}));
+  addEventListener("resize",layoutRank);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layoutRank);
+
+  /* ---------- ask assistant ---------- */
+  const QA=[
+    {q:["What does Nawaf do?","ماذا يعمل نواف؟"],a:["Nawaf Alhussain is a Lead AI Data Scientist at Channels by STC in Riyadh, with 6+ years in data and AI and a BSc in Information Systems from Prince Sattam bin Abdulaziz University (2016–2020). He builds bilingual AI agents, demand forecasting systems and knowledge graphs that run in production.","نواف آل حسين قائد علماء البيانات للذكاء الاصطناعي في قنوات STC بالرياض، حاصل على بكالوريوس نظم المعلومات من جامعة الأمير سطام بن عبدالعزيز (2016–2020)، ولديه أكثر من ست سنوات في البيانات والذكاء الاصطناعي، ويبني وكلاء ذكيين ثنائيي اللغة وأنظمة تنبؤ بالطلب ورسوماً معرفية تعمل في الإنتاج."]},
+    {q:["What's in production?","ما الأنظمة العاملة في الإنتاج؟"],a:["Two systems: MusaedAI, a bilingual HR assistant with 23+ live services and 0.94 retrieval precision, and Emdad, demand planning and replenishment across ~300 branches and 900K branch-product series, for which Nawaf was honoured as Project Champion 2025 by the Technology & Operations sector. The Sales Insight Agent is an internal pilot, and the HR Policy Knowledge Graph is in development.","نظامان: مساعد Ai للموارد البشرية بأكثر من ثلاث وعشرين خدمة ودقة استرجاع 0.94، وإمداد لتخطيط الطلب والتزويد عبر نحو ٣٠٠ فرع و٩٠٠ ألف سلسلة، وقد كُرّم نواف عنه ضمن أبطال مشاريع 2025 في قطاع التقنية والعمليات. أما وكيل رؤى المبيعات فتجربة داخلية، والرسم المعرفي للسياسات قيد التطوير."]},
+    {q:["Which tools does he use?","ما أدواته؟"],a:["Analysis: EDA, pandas, feature engineering, Streamlit. Time series: seasonal decomposition, SARIMAX, Syntetos-Boylan. Agents: LangGraph, LangChain, Azure OpenAI, Ollama, FastAPI. Retrieval: Azure AI Search, BGE-M3 with BM25, ChromaDB, RAGAS. Knowledge engineering: ontology design, controlled vocabularies, RDF, OWL, SKOS, SPARQL, LLM entity extraction. Graph systems: Neo4j, Cypher, GraphRAG. ML: SARIMAX, Random Forest, Syntetos-Boylan, GRPO with LoRA. Platform: SQL Server, Airflow, Docker, Streamlit.","في التحليل يستخدم الاستكشاف الأولي للبيانات (EDA) وpandas وStreamlit، وفي السلاسل الزمنية التفكيك الموسمي وSARIMAX، وفي الوكلاء LangGraph وAzure OpenAI وFastAPI، وفي الاسترجاع Azure AI Search مع البحث الهجين وتقييم RAGAS، وفي هندسة المعرفة تصميم الأنطولوجيا والمفردات المضبوطة ومعايير RDF وOWL وSKOS والاستخراج بالنماذج اللغوية، وفي أنظمة الرسوم Neo4j وGraphRAG، وفي تعلم الآلة نماذج التنبؤ وتصنيف أنماط الطلب، وفي المنصة SQL Server وAirflow وDocker وStreamlit."]},
+    {q:["Does he work in Arabic?","هل يعمل على اللغة العربية؟"],a:["Yes. MusaedAI answers in Arabic and English, its hybrid retrieval was chosen so Arabic paraphrases still match, and the Sales Insight Agent takes questions in Arabic. He is also building a research graph of Arabic NLP papers on arXiv.","نعم، فمساعد Ai يجيب بالعربية والإنجليزية، واختير البحث الهجين ليطابق الصياغات العربية المختلفة، ووكيل رؤى المبيعات يستقبل الأسئلة بالعربية، كما يبني رسماً معرفياً لأبحاث معالجة اللغة العربية في arXiv."]},
+    {q:["Has he received any recognition?","هل حصل على تكريم؟"],a:["Yes. He was honoured as a Project Champion 2025 for Emdad by the Deputy CEO of Technology & Operations at Channels by STC, and has been named the sector's champion of the month several times. He also received appreciation from the CEO for leading the company's AI initiative, and recognition for delivering the PDPL (Personal Data Protection Law) project.","نعم، كُرّم بطلاً للمشاريع عام 2025 عن مشروع إمداد من نائب الرئيس لقطاع التقنية والعمليات في قنوات STC، واختير بطلاً للقطاع في التكريم الشهري أكثر من مرة، كما حصل على تقدير من الرئيس التنفيذي لقيادته مبادرة الذكاء الاصطناعي، وتكريم على إنجاز مشروع نظام حماية البيانات الشخصية."]},
+    {q:["What is he learning now?","ماذا يتعلم حالياً؟"],a:["He has completed the Knowledge Graph Academy course (RDF, OWL, SPARQL and agents), is evaluating GraphRAG against classic RAG for production, and preparing for the CDMP data management certification. He is already PMI-CPMAI certified.","أكمل دورة أكاديمية الرسوم المعرفية (RDF وOWL وSPARQL والوكلاء)، ويقيّم GraphRAG مقابل الاسترجاع التقليدي للإنتاج، ويستعد لشهادة إدارة البيانات CDMP، وهو حاصل على شهادة PMI-CPMAI."]}
+  ];
+  const ask=document.getElementById("ask"),fab=document.getElementById("askFab"),log=document.getElementById("log"),sugs=document.getElementById("sugs"),form=document.getElementById("askForm"),inp=document.getElementById("askIn");
+  let turns=[],sampleFn=null,busy=false,ctl=null;
+  const L=()=>isAr()?1:0;
+  function bubble(cls,text){const d=document.createElement("div");d.className="msg "+cls;d.textContent=text;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+  function renderSugs(){sugs.innerHTML="";QA.forEach(x=>{const b=document.createElement("button");b.type="button";b.textContent=x.q[L()];b.addEventListener("click",()=>{bubble("me",x.q[L()]);setTimeout(()=>bubble("bot",x.a[L()]),250);turns.push({role:"user",content:x.q[L()]},{role:"assistant",content:x.a[L()]})});sugs.appendChild(b)});
+    inp.placeholder=isAr()?"اكتب سؤالك…":"Type your question…"}
+  function greet(){log.innerHTML="";bubble("bot",isAr()?"أهلاً! اختر سؤالاً أدناه لتعرف المزيد عن نواف وأعماله.":"Hi! Pick a question below to learn about Nawaf and his work.")}
+  function openAsk(){ask.classList.add("show");ask.setAttribute("aria-hidden","false");fab.hidden=true;if(!log.children.length){greet()}renderSugs();(form.hidden?sugs.querySelector("button"):inp)?.focus()}
+  function closeAsk(){ask.classList.remove("show");ask.setAttribute("aria-hidden","true");fab.hidden=false;fab.focus()}
+  fab.addEventListener("click",openAsk);document.getElementById("askClose").addEventListener("click",closeAsk);
+  addEventListener("keydown",e=>{if(e.key==="Escape"&&ask.classList.contains("show"))closeAsk()});
+  function knowledge(){const t=[document.querySelector("main").innerText,...[...document.querySelectorAll("template")].map(x=>x.content.textContent)].join("\n");return t.replace(/\s+\n/g,"\n").replace(/[ \t]+/g," ").slice(0,24000)}
+  const RULES=()=>"You are the assistant on Nawaf's personal portfolio website. Answer visitors' questions about Nawaf using ONLY the portfolio content below. If the answer is not in it, say you don't have that information and suggest contacting Nawaf through the Contact section. Never invent facts, numbers, employers, dates or contact details. Keep answers to 2-4 short sentences, plain text, no markdown. Reply in the same language as the visitor's question (Arabic or English).\n\nPORTFOLIO CONTENT:\n"+knowledge();
+  form.addEventListener("submit",async e=>{e.preventDefault();const q=inp.value.trim();if(!q||busy||!sampleFn)return;inp.value="";bubble("me",q);turns.push({role:"user",content:q});
+    const out=bubble("bot wait",isAr()?"أفكر…":"Thinking…");busy=true;ctl=new AbortController();
+    try{const {text}=await sampleFn([{role:"user",content:RULES()},...turns.slice(-10)],{cache:false,modelTier:"quick",signal:ctl.signal,onText:({text})=>{out.classList.remove("wait");out.textContent=text;log.scrollTop=log.scrollHeight}});
+      out.classList.remove("wait");out.textContent=text;turns.push({role:"assistant",content:text})}
+    catch(err){out.classList.remove("wait");const c=err&&err.code;
+      if(["not_granted","sampling_disabled","not_declared","capability_disabled","capability_removed","session_expired"].includes(c)){out.textContent=isAr()?"الأسئلة الحرة غير متاحة الآن، لكن الأسئلة المقترحة تعمل دائماً.":"Free-form questions aren't available right now, but the suggested questions always work.";if(c!=="session_expired"){form.hidden=true;document.getElementById("aiNote").hidden=true}}
+      else if(c==="rate_limited")out.textContent=isAr()?"كثرت الأسئلة، حاول بعد قليل.":"Too many questions at once. Try again in a moment.";
+      else if(c!=="cancelled")out.textContent=(err&&err.text)||(isAr()?"تعذّر الحصول على إجابة، حاول مرة أخرى.":"Couldn't get an answer. Please try again.");
+      turns.pop()}
+    finally{busy=false}});
+  if(window.claude&&claude.use){claude.use("sample").then(s=>{if(s){sampleFn=s;form.hidden=false;document.getElementById("aiNote").hidden=false;
+    if(log.children.length===1)log.firstChild.textContent=isAr()?"أهلاً! اختر سؤالاً أو اكتب سؤالك عن نواف وأعماله.":"Hi! Pick a question or type your own about Nawaf and his work."}}).catch(()=>{})}
+  const _setLang=setLang;setLang=function(l){_setLang(l);if(ask.classList.contains("show"))renderSugs()};
+  document.getElementById("langBtn").replaceWith(document.getElementById("langBtn").cloneNode(true));
+  document.getElementById("langBtn").addEventListener("click",()=>setLang(isAr()?"en":"ar"));
+
+  /* ---------- KG query demo ---------- */
+  const KG={nodes:[
+    {id:"annual",x:150,y:170,t:"Annual leave",ar:"الإجازة السنوية",k:"Policy"},
+    {id:"sick",x:70,y:70,t:"Sick leave",ar:"الإجازة المرضية",k:"Policy"},
+    {id:"mat",x:60,y:250,t:"Maternity leave",ar:"إجازة الوضع",k:"Policy"},
+    {id:"remote",x:220,y:60,t:"Remote work",ar:"العمل عن بُعد",k:"Policy"},
+    {id:"a109",x:330,y:120,t:"Art. 109",ar:"المادة ١٠٩",k:"Article",law:1},
+    {id:"a117",x:230,y:290,t:"Art. 117",ar:"المادة ١١٧",k:"Article",law:1},
+    {id:"a151",x:200,y:325,t:"Art. 151",ar:"المادة ١٥١",k:"Article",law:1},
+    {id:"carry",x:330,y:220,t:"Carry-over rule",ar:"ترحيل الرصيد",k:"Clause"},
+    {id:"v2",x:390,y:300,t:"v2025.2",ar:"الإصدار 2025.2",k:"Version"},
+    {id:"elig",x:30,y:170,t:"Eligibility",ar:"الاستحقاق",k:"Clause"}],
+   edges:[["annual","a109","IMPLEMENTS"],["annual","carry","HAS_CLAUSE"],["carry","v2","VERSION"],["annual","elig","HAS_CLAUSE"],["sick","a117","IMPLEMENTS"],["mat","a151","IMPLEMENTS"],["remote","annual","RELATED"],["sick","elig","HAS_CLAUSE"]],
+   q:{annual:{c:"MATCH (p:Policy {name:'Annual leave'})-[:IMPLEMENTS]->(a:Article)\nOPTIONAL MATCH (p)-[:HAS_CLAUSE]->(c:Clause)\nRETURN p, a, collect(c) AS clauses",hi:["a109","carry","elig"],en:"Annual leave is 21 days, rising to 30 after five years of service, with a carry-over rule and eligibility clause on top.",ar:"الإجازة السنوية ٢١ يوماً وتصبح ٣٠ بعد خمس سنوات خدمة، مع بند ترحيل الرصيد وبند الاستحقاق.",cite:["Policy · Annual leave","Labor Law · Art. 109"]},
+      sick:{c:"MATCH (p:Policy {name:'Sick leave'})-[:IMPLEMENTS]->(a:Article)\nRETURN p.text, a.number, a.text",hi:["a117","elig"],en:"Sick leave runs up to 120 days a year: full pay for 30 days, then three-quarters pay, then unpaid.",ar:"الإجازة المرضية حتى ١٢٠ يوماً في السنة: أجر كامل لثلاثين يوماً ثم ثلاثة أرباع الأجر ثم بلا أجر.",cite:["Policy · Sick leave","Labor Law · Art. 117"]},
+      mat:{c:"MATCH (p:Policy {name:'Maternity leave'})-[:IMPLEMENTS]->(a:Article)\nRETURN p.text, a.number",hi:["a151"],en:"Maternity leave is 12 weeks with full pay, of which at least six weeks follow the birth.",ar:"إجازة الوضع اثنا عشر أسبوعاً بأجر كامل، منها ستة أسابيع على الأقل بعد الولادة.",cite:["Policy · Maternity leave","Labor Law · Art. 151"]},
+      remote:{c:"MATCH (p:Policy {name:'Remote work'})-[:RELATED]->(r)\nRETURN p, r",hi:["annual"],en:"Remote work is an internal policy with no direct Labor Law article; it links to annual leave for day-count rules.",ar:"العمل عن بُعد سياسة داخلية بلا مادة مباشرة في نظام العمل، وترتبط بالإجازة السنوية في احتساب الأيام.",cite:["Policy · Remote work"]},
+      a109:{c:"MATCH (a:Article {number:109})<-[:IMPLEMENTS]-(p:Policy)\nRETURN a.text, collect(p.name) AS policies",hi:["annual"],en:"Article 109 sets the statutory annual leave minimum and is implemented by the company annual leave policy.",ar:"تحدد المادة ١٠٩ الحد الأدنى النظامي للإجازة السنوية، وتنفّذها سياسة الإجازة السنوية في الشركة.",cite:["Labor Law · Art. 109","Policy · Annual leave"]},
+      a117:{c:"MATCH (a:Article {number:117})<-[:IMPLEMENTS]-(p:Policy)\nRETURN a.text, p.name",hi:["sick"],en:"Article 117 governs paid sick leave and is implemented by the sick leave policy.",ar:"تنظم المادة ١١٧ الإجازة المرضية المدفوعة وتنفّذها سياسة الإجازة المرضية.",cite:["Labor Law · Art. 117","Policy · Sick leave"]},
+      a151:{c:"MATCH (a:Article {number:151})<-[:IMPLEMENTS]-(p:Policy)\nRETURN a.text, p.name",hi:["mat"],en:"Article 151 grants maternity leave and is implemented by the maternity leave policy.",ar:"تمنح المادة ١٥١ إجازة الوضع وتنفّذها سياسة إجازة الوضع.",cite:["Labor Law · Art. 151","Policy · Maternity leave"]},
+      carry:{c:"MATCH (c:Clause {name:'Carry-over rule'})-[:VERSION]->(v)\nMATCH (p:Policy)-[:HAS_CLAUSE]->(c)\nRETURN p.name, c.text, v.id",hi:["annual","v2"],en:"Unused leave may be carried over once, up to 10 days, under version 2025.2 of the annual leave policy.",ar:"يجوز ترحيل الرصيد غير المستخدم مرة واحدة بحد أقصى عشرة أيام وفق الإصدار 2025.2 من السياسة.",cite:["Clause · Carry-over","Version 2025.2"]},
+      v2:{c:"MATCH (v:Version {id:'2025.2'})<-[:VERSION]-(c)\nRETURN c.name, v.effective_from",hi:["carry"],en:"Version 2025.2 is the current revision of the carry-over clause; earlier versions stay in the graph for audit.",ar:"الإصدار 2025.2 هو المراجعة الحالية لبند الترحيل، وتبقى الإصدارات السابقة في الرسم للتدقيق.",cite:["Version 2025.2"]},
+      elig:{c:"MATCH (c:Clause {name:'Eligibility'})<-[:HAS_CLAUSE]-(p:Policy)\nRETURN collect(p.name) AS policies, c.text",hi:["annual","sick"],en:"The eligibility clause is shared by annual and sick leave: it applies after the probation period.",ar:"بند الاستحقاق مشترك بين الإجازة السنوية والمرضية ويسري بعد فترة التجربة.",cite:["Clause · Eligibility"]}}};
+  const KS=document.getElementById("kgsvg");let kgSel="annual";
+  function kgRender(){KS.innerHTML="";const byId={};KG.nodes.forEach(n=>byId[n.id]=n);const q=KG.q[kgSel],lit=new Set([kgSel,...q.hi]);
+    KG.edges.forEach(([a,b,l])=>{const A=byId[a],B=byId[b],on=lit.has(a)&&lit.has(b);el("line",{class:"ke"+(on?" on":""),x1:A.x,y1:A.y,x2:B.x,y2:B.y},KS);
+      if(on)el("text",{class:"kl",x:(A.x+B.x)/2,y:(A.y+B.y)/2-5,"text-anchor":"middle"},KS).textContent=l});
+    KG.nodes.forEach(n=>{const g=el("g",{class:"kn"+(n.law?" law":"")+(n.id===kgSel?" on":lit.has(n.id)?" path":""),tabindex:"0",role:"button"},KS);
+      el("circle",{cx:n.x,cy:n.y,r:n.id===kgSel?13:n.k==="Policy"||n.k==="Article"?10:7},g);el("text",{x:n.x,y:n.y+(n.y>300?-16:22),"text-anchor":"middle"},g).textContent=isAr()?n.ar:n.t;
+      const go=()=>{kgSel=n.id;kgRender()};g.addEventListener("click",go);g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}})});
+    document.getElementById("cyph").innerHTML='<span class="c">// generated</span>\n'+q.c.replace(/\b(MATCH|OPTIONAL|RETURN|AS|collect)\b/g,'<span class="k">$1</span>').replace(/'[^']*'/g,m=>`<span class="s">${m}</span>`);
+    document.getElementById("kgAns").innerHTML=`<span class="eyebrow" style="display:block;margin-bottom:4px">${isAr()?"الإجابة":"Answer"}</span>${isAr()?q.ar:q.en}<div class="cite">${q.cite.map(c=>`<span>${c}</span>`).join("")}</div>`}
+  kgRender();
+
+  /* ---------- back to top + arrow keys ---------- */
+  const tt=document.getElementById("totop");addEventListener("scroll",()=>tt.classList.toggle("show",scrollY>900),{passive:true});tt.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
+  addEventListener("keydown",e=>{if(!drawer.classList.contains("show"))return;const cur=body.querySelector(".dnav");if(!cur)return;
+    const fwd=isAr()?"ArrowLeft":"ArrowRight",back=isAr()?"ArrowRight":"ArrowLeft";if(e.key===fwd)cur.children[1].click();else if(e.key===back)cur.children[0].click()});
+
+  /* ---------- contact form ---------- */
+  const EMAIL=document.getElementById("lnk-em").textContent.trim();document.getElementById("cAddr").textContent=EMAIL;
+  const cm=document.getElementById("cmodal"),cf=document.getElementById("cform"),cs=document.getElementById("cSent");let cLast=null;
+  function openContact(e){cLast=e&&e.currentTarget;if(ask.classList.contains("show"))closeAsk();cm.classList.add("show");cm.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";cs.classList.remove("show");setTimeout(()=>document.getElementById("cName").focus(),350)}
+  function closeContact(){cm.classList.remove("show");cm.setAttribute("aria-hidden","true");document.body.style.overflow="";if(cLast)cLast.focus()}
+  document.querySelectorAll(".open-contact").forEach(b=>b.addEventListener("click",openContact));
+  document.getElementById("cClose").addEventListener("click",closeContact);document.getElementById("cbg").addEventListener("click",closeContact);
+  addEventListener("keydown",e=>{if(e.key==="Escape"&&cm.classList.contains("show"))closeContact()});
+  const cv2=()=>{const g=id=>document.getElementById(id).value.trim();return{n:g("cName"),m:g("cMail"),s:g("cSubj"),b:g("cMsg")}};
+  const compose=()=>{const v=cv2();return{subject:v.s||(isAr()?"رسالة من موقعك":"Message from your portfolio"),body:`${v.b}\n\n— ${v.n}\n${v.m}`}};
+  function valid(){const v=cv2();if(!v.n||!v.m||!v.b){cs.textContent=isAr()?"يرجى تعبئة الاسم والبريد والرسالة.":"Please fill in your name, email and message.";cs.classList.add("show");return false}return true}
+  cf.addEventListener("submit",e=>{e.preventDefault();if(!valid())return;const c=compose();
+    location.href=`mailto:${EMAIL}?subject=${encodeURIComponent(c.subject)}&body=${encodeURIComponent(c.body)}`;
+    cs.textContent=isAr()?"إن لم يُفتح تطبيق البريد خلال ثوانٍ، استخدم زر «انسخ الرسالة» وأرسلها يدوياً.":"If your email app didn't open within a few seconds, use “Copy message” and send it manually.";cs.classList.add("show")});
+  document.getElementById("cCopy").addEventListener("click",()=>{if(!valid())return;const c=compose();const txt=`To: ${EMAIL}\nSubject: ${c.subject}\n\n${c.body}`;
+    const ok=()=>{cs.textContent=isAr()?"نُسخت الرسالة مع العنوان ✓ الصقها في بريدك وأرسلها.":"Message and address copied ✓ Paste it into your email and send.";cs.classList.add("show")};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(ok).catch(()=>{cs.textContent=txt;cs.classList.add("show")});else{cs.textContent=txt;cs.classList.add("show")}});
+
+  /* ---------- section numbers + tilt ---------- */
+  document.querySelectorAll("section[id] .sec-head .eyebrow").forEach((e,i)=>e.dataset.n=String(i+1).padStart(2,"0"));
+  if(!reduce&&matchMedia("(hover:hover)").matches)document.querySelectorAll(".tile").forEach(t=>{t.addEventListener("pointermove",e=>{const r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;t.style.transform=`translateY(-6px) perspective(1200px) rotateX(${-y*4}deg) rotateY(${x*5}deg)`});t.addEventListener("pointerleave",()=>t.style.transform="")});
+
+  /* ---------- copy email ---------- */
+  document.getElementById("cpEm").addEventListener("click",function(){const t=document.getElementById("lnk-em").textContent,b=this,o=b.innerHTML;const done=()=>{b.textContent=isAr()?"تم النسخ ✓":"Copied ✓";setTimeout(()=>b.innerHTML=o,1600)};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done).catch(()=>{const r=document.createRange();r.selectNodeContents(document.getElementById("lnk-em"));getSelection().removeAllRanges();getSelection().addRange(r)});else{const r=document.createRange();r.selectNodeContents(document.getElementById("lnk-em"));getSelection().removeAllRanges();getSelection().addRange(r)}});
+
+  let saved="en";try{saved=localStorage.getItem("lang")||"en"}catch(e){}
+  setLang(saved==="ar"?"ar":"en");
+})();
+</script>
+
+</body>
+</html>
