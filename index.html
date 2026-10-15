@@ -783,9 +783,6 @@ fill:var(--muted);pointer-events:none;transition:fill .25s}
         <p id="advice"></p>
       </div>
     </div>
-    </div>
-  </section>
-
     <div class="panel" id="p-kg" role="tabpanel" aria-labelledby="tab-kg" hidden>
       <div class="side">
         <p class="eyebrow">HR Policy KG · Neo4j</p>
@@ -796,6 +793,9 @@ fill:var(--muted);pointer-events:none;transition:fill .25s}
       </div>
       <div><svg id="kgsvg" viewBox="0 0 440 340" aria-label="HR policy knowledge graph"></svg><p class="fine" style="margin-top:8px"><span class="en">Sample graph. Amber nodes are Labor Law articles, teal nodes are company policy.</span><span class="ar">رسم تجريبي؛ العقد الكهرمانية مواد نظام العمل والخضراء سياسة الشركة.</span></p></div>
     </div>
+    </div>
+  </section>
+
 
   <section id="notes" class="wrap">
     <div class="sec-head">
@@ -1274,15 +1274,15 @@ fill:var(--muted);pointer-events:none;transition:fill .25s}
   /* ---------- KG query demo ---------- */
   const KG={nodes:[
     {id:"annual",x:150,y:170,t:"Annual leave",ar:"الإجازة السنوية",k:"Policy"},
-    {id:"sick",x:70,y:70,t:"Sick leave",ar:"الإجازة المرضية",k:"Policy"},
-    {id:"mat",x:60,y:250,t:"Maternity leave",ar:"إجازة الوضع",k:"Policy"},
+    {id:"sick",x:90,y:60,t:"Sick leave",ar:"الإجازة المرضية",k:"Policy"},
+    {id:"mat",x:70,y:245,t:"Maternity leave",ar:"إجازة الوضع",k:"Policy"},
     {id:"remote",x:220,y:60,t:"Remote work",ar:"العمل عن بُعد",k:"Policy"},
     {id:"a109",x:330,y:120,t:"Art. 109",ar:"المادة ١٠٩",k:"Article",law:1},
-    {id:"a117",x:230,y:290,t:"Art. 117",ar:"المادة ١١٧",k:"Article",law:1},
-    {id:"a151",x:200,y:325,t:"Art. 151",ar:"المادة ١٥١",k:"Article",law:1},
+    {id:"a117",x:300,y:300,t:"Art. 117",ar:"المادة ١١٧",k:"Article",law:1},
+    {id:"a151",x:160,y:325,t:"Art. 151",ar:"المادة ١٥١",k:"Article",law:1},
     {id:"carry",x:330,y:220,t:"Carry-over rule",ar:"ترحيل الرصيد",k:"Clause"},
     {id:"v2",x:390,y:300,t:"v2025.2",ar:"الإصدار 2025.2",k:"Version"},
-    {id:"elig",x:30,y:170,t:"Eligibility",ar:"الاستحقاق",k:"Clause"}],
+    {id:"elig",x:60,y:160,t:"Eligibility",ar:"الاستحقاق",k:"Clause"}],
    edges:[["annual","a109","IMPLEMENTS"],["annual","carry","HAS_CLAUSE"],["carry","v2","VERSION"],["annual","elig","HAS_CLAUSE"],["sick","a117","IMPLEMENTS"],["mat","a151","IMPLEMENTS"],["remote","annual","RELATED"],["sick","elig","HAS_CLAUSE"]],
    q:{annual:{c:"MATCH (p:Policy {name:'Annual leave'})-[:IMPLEMENTS]->(a:Article)\nOPTIONAL MATCH (p)-[:HAS_CLAUSE]->(c:Clause)\nRETURN p, a, collect(c) AS clauses",hi:["a109","carry","elig"],en:"Annual leave is 21 days, rising to 30 after five years of service, with a carry-over rule and eligibility clause on top.",ar:"الإجازة السنوية ٢١ يوماً وتصبح ٣٠ بعد خمس سنوات خدمة، مع بند ترحيل الرصيد وبند الاستحقاق.",cite:["Policy · Annual leave","Labor Law · Art. 109"]},
       sick:{c:"MATCH (p:Policy {name:'Sick leave'})-[:IMPLEMENTS]->(a:Article)\nRETURN p.text, a.number, a.text",hi:["a117","elig"],en:"Sick leave runs up to 120 days a year: full pay for 30 days, then three-quarters pay, then unpaid.",ar:"الإجازة المرضية حتى ١٢٠ يوماً في السنة: أجر كامل لثلاثين يوماً ثم ثلاثة أرباع الأجر ثم بلا أجر.",cite:["Policy · Sick leave","Labor Law · Art. 117"]},
